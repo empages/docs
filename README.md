@@ -1,0 +1,2 @@
+# Emeraude.Docs
+Emeraude documentation
