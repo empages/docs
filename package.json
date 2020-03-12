@@ -1,0 +1,14 @@
+{
+  "name": "emeraude-docs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vuepress": "^0.14.8",
+    "vuepress-theme-vue": "^1.1.0"
+  }
+}
