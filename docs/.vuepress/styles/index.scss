@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "BankGothic"; src: url("/assets/fonts/BankGothicMedium.ttf");
+}
+
+$primary: #7eb62e;
+$secondary: #508800;
+$white: #fff;
+$black: #000;
+$gray-light: #eaecef;
+
+.btn {
+  color: $white !important;
+  background: $primary !important;
+  text-decoration: none !important;
+  padding: 10px 12px;
+  font-size: 16px;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: $secondary !important;
+  }
+
+  &.btn-large {
+    font-size: 22px;
+  }
+}
+
+.no-sidebar {
+  .page {
+    .content {
+      max-width: unset;
+    }
+  }
+}
+
+.hero {
+  display: none;
+}
+
+#homepage {
+  .brand-container {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .brand {
+      text-decoration: none !important;
+
+      .logo {
+        width: 150px;
+      }
+      .title {
+        font-size: 90px;
+        color: $black;
+        font-family: BankGothic;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .sub-title {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: $black;
+        border: none
+      }
+    }
+  }
+
+  .get-started-btn {
+    margin-top: 30px;
+    display: inline-block;
+  }
+}
