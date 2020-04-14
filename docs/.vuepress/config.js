@@ -77,7 +77,7 @@ module.exports = {
                     sidebarDepth: 1,
                     children: [
                         'account',
-                        'client-controllers',
+                        'em-pages',
                         'ssr-initial-state',
                         'localization',
                         'api-controllers',
