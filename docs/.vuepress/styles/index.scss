@@ -8,6 +8,53 @@ $white: #fff;
 $black: #000;
 $gray-light: #eaecef;
 
+$breakpoints: (
+  xxs: 420px,
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1440px,
+  xxl: 1600px
+);
+
+@mixin respond-below($breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get(
+                    $breakpoints,
+                    $breakpoint
+    ); // Write the media query.
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+    // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Log a warning.
+    @warn "Invalid breakpoint: #{$breakpoint}.";
+  }
+}
+
+
+@mixin respond-above($breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get(
+                    $breakpoints,
+                    $breakpoint
+    ); // Write the media query.
+    @media (min-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+    // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Log a warning.
+    @warn "Invalid breakpoint: #{$breakpoint}.";
+  }
+}
+
 .btn {
   color: $white !important;
   background: $primary !important;
@@ -53,21 +100,32 @@ $gray-light: #eaecef;
 
       .logo {
         width: 150px;
+        @include respond-below(sm) {
+          width: 100px;
+        }
       }
       .title {
-        font-size: 90px;
+        font-size: 7vw;
         color: $black;
         font-family: BankGothic;
         font-weight: 400;
         text-transform: uppercase;
         margin-top: 0px;
         margin-bottom: 0px;
+
+        @include respond-below(sm) {
+          font-size: 11vw;
+        }
       }
       .sub-title {
         margin-top: 0px;
         margin-bottom: 0px;
         color: $black;
-        border: none
+        border: none;
+
+        @include respond-below(sm) {
+          font-size: 24px;
+        }
       }
     }
   }
