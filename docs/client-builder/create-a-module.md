@@ -25,7 +25,7 @@ public class VueExampleModule : ScaffoldModule
 }
 ```
 
-### Module Constructor
+## Module Constructor
 The information that you can provide in the constructor is vital for the generation process.
 The meaning of each property is:
 - *Name* - Name of the module. *Emeraude* uses naming convention with the related technology in front of the name ('Vue Example' for Vue module).
@@ -34,7 +34,7 @@ It is maybe the most important property because if it is set incorrectly the *Cl
 - *Type* - The instance type of the module (Undefined/Web/Mobile).
 - *Order* - [Optional] The order of execution in case you use the bulk generation engine for web or mobile modules.
 
-### Module Workflow
+## Module Workflow
 Each module is defined by specified workflow which starts from data extraction from databases of the application, 
 project assemblies and/or custom data sources.
 The second step of the workflow is the resources definition folders/files where must be defined the name, path and content 
@@ -43,7 +43,7 @@ of the desired files and/or folders. On the following scheme is visualized the m
 ![Module Workflow](/assets/images/client_builder_module.png)
 
 
-### Folders
+## Folders
 **DefineFolders** method is built to contain the module logic for folders generation. The definition is not required and it 
 is ok to leave the method with no implementation. Though if you need folders for your module you can define them by using 
 **AddFolder** method:
@@ -65,7 +65,7 @@ public override void DefineFolders()
 ```
 
 
-### Files
+## Files
 **DefineFiles** method is created to contain the module logic for module files. You are free to leave the method without
 implementation if your module generates folders only. To define your files use **AddFile** method:
 ```cs

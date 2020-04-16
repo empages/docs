@@ -141,7 +141,7 @@ module.exports = {
                     sidebarDepth: 1,
                     children: [
                         'introduction',
-                        'assembly-scanning',
+                        'type-definition',
                         'building-entities',
                         'localization'
                     ]

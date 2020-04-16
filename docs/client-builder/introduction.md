@@ -17,7 +17,7 @@ a custom modules can be created which could provide a lot of improvements into t
 will be disabled when the application goes out of development mode.
 :::
 
-### Module Definition
+## Module Definition
 Each module is defined by few elements:
 - **Name** - Name of the module.
 - **Locked** - Indicates that the module result files are locked for custom manipulation. (Regeneration will 
