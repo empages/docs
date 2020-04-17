@@ -5,6 +5,7 @@ module.exports = {
         ['link', { rel: "apple-touch-icon", href: "/assets/favicons/icon200.png"}],
         ['link', { rel: "icon", type: "image/x-icon", href: "/assets/favicons/icon32.ico"}],
         ['link', { rel: "icon", type: "image/png", href: "/assets/favicons/icon32.png"}],
+        ['link', { rel: "stylesheet", type: "text/css", href: "/assets/fonts/mdi/css/materialdesignicons.min.css"}],
     ],
     serviceWorker: true,
     theme: 'vue',

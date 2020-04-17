@@ -7,6 +7,8 @@ $secondary: #508800;
 $white: #fff;
 $black: #000;
 $gray-light: #eaecef;
+$gray-dark: #4b4d50;
+$gray-darker: #2f3134;
 
 $breakpoints: (
   xxs: 420px,
@@ -55,6 +57,20 @@ $breakpoints: (
   }
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: $white;
+  background: $primary;
+}
+
+::selection {
+  color: $white;
+  background: $primary;
+}
+
+.d-flex {
+  display: flex !important
+}
+
 .btn {
   color: $white !important;
   background: $primary !important;
@@ -65,6 +81,8 @@ $breakpoints: (
   -moz-transition: all 1s ease-out;
   -o-transition: all 1s ease-out;
   transition: all 1s ease-out;
+  margin-top: 30px;
+  display: inline-block;
 
   &:hover,
   &:active,
@@ -75,6 +93,17 @@ $breakpoints: (
   &.btn-large {
     font-size: 22px;
   }
+
+  &.btn-gray {
+    background: $gray-dark !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background:  $gray-darker !important;
+    }
+  }
+
 }
 
 .no-sidebar {
@@ -130,8 +159,104 @@ $breakpoints: (
     }
   }
 
-  .get-started-btn {
-    margin-top: 30px;
-    display: inline-block;
+  .hp-header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .hp-title {
+      border-bottom: none;
+      font-weight: bold;
+      font-size: 30px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 0px;
+
+      @include respond-below(xxs) {
+        font-size: 20px;
+      }
+    }
+
+    .hp-subtitle {
+      font-size: 18px;
+      text-align: center;
+      margin-top: 0px;
+
+      @include respond-below(xxs) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  #technologies {
+    .tech-list-container {
+      width: 100%;
+      padding: 10px 15px;
+      text-align: center;
+
+      .tech-item {
+        display: inline-block;
+        margin: 10px;
+
+        img {
+          height: 100px;
+          @include respond-below(xxs) {
+            max-width: 100px;
+            height: unset;
+          }
+        }
+      }
+    }
+  }
+
+  #features {
+    .feature-list-row {
+      display: flex;
+
+      @include respond-below(sm) {
+        display: block;
+      }
+
+      .feature-list-item {
+        width: 25%;
+        padding: 5px;
+
+        @include respond-below(sm) {
+          width: 46%;
+          display: inline-block;
+        }
+
+        @include respond-below(xxs) {
+          width: 100%;
+        }
+
+        h2 {
+          font-size: 18px;
+          font-weight: bold;
+          border: none;
+          margin: auto;
+          margin-left: 10px;
+        }
+
+        .mdi {
+          font-size: 40px;
+          margin: 0px;
+        }
+        
+        .feature-description {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  #support {
+    .donate-section {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+  }
+
+  .mb-2 {
+    margin-bottom: 10px !important;
   }
 }
