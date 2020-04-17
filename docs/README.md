@@ -131,7 +131,7 @@ footer: Apache License 2.0 • Copyright © 2020 Definux
             <h3 class="hp-subtitle">any help would be highly appreciated</h3>
         </div>
         <div class="donate-section">
-            <a target="_blank" class="btn btn-large" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YTEKSUJU7JTKW&source=url">Donate with PayPal</a>
+            <a target="_blank" class="btn btn-large" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YTEKSUJU7JTKW&source=url">Donate via PayPal</a>
             <a target="_blank" class="btn btn-large" href="https://www.patreon.com/definux">Become a backer or sponsor via Patreon</a>
         </div>
     </div>

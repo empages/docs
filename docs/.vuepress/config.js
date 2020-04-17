@@ -7,6 +7,11 @@ module.exports = {
         ['link', { rel: "icon", type: "image/png", href: "/assets/favicons/icon32.png"}],
         ['link', { rel: "stylesheet", type: "text/css", href: "/assets/fonts/mdi/css/materialdesignicons.min.css"}],
     ],
+    plugins: [
+        ['@vuepress/google-analytics', {
+            ga: 'UA-92025616-3'
+        }]
+    ],
     serviceWorker: true,
     theme: 'vue',
     themeConfig: {
@@ -175,5 +180,5 @@ module.exports = {
             ],
         },
         displayAllHeaders: true,
-    }
+    },
 }
