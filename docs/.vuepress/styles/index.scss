@@ -131,6 +131,13 @@ $breakpoints: (
 .navbar {
   background-color: $menu-color !important;
   border-bottom: none !important;
+
+  .search-box {
+    input {
+      border-radius: 2px !important;
+    }
+  }
+
   .sidebar-button {
     color: $white;
   }
