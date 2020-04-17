@@ -85,6 +85,11 @@ $breakpoints: (
   margin-top: 30px;
   display: inline-block;
 
+  @include respond-below(xxs) {
+    margin-top: 10px;
+    width: 240px !important;
+  }
+
   &:hover,
   &:active,
   &:focus {
@@ -127,8 +132,9 @@ $breakpoints: (
     font-weight: 500;
     padding-left: 5px;
     font-size: 24px;
+    overflow: unset !important;
     @include respond-below(nav) {
-      color: $white;
+      color: $white !important;
     }
 
     &::before {
