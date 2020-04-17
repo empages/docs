@@ -8,9 +8,12 @@ module.exports = {
         ['link', { rel: "stylesheet", type: "text/css", href: "/assets/fonts/mdi/css/materialdesignicons.min.css"}],
     ],
     plugins: [
-        ['@vuepress/google-analytics', {
-            ga: 'UA-92025616-4'
-        }]
+        [
+            '@vuepress/google-analytics',
+            {
+                ga: 'UA-92025616-4'
+            }
+        ]
     ],
     serviceWorker: true,
     theme: 'vue',
