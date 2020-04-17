@@ -13,7 +13,7 @@ footer: Apache License 2.0 • Copyright © 2020 Definux
         <h2 class="sub-title">The Sparkling B2C Application Framework</h2>
       </a>
       <a class="btn btn-large get-started-btn" href="/guide/introduction.html" title="Get Started">GET STARTED</a>
-      <a class="btn btn-large btn-gray" href="https://github.com/Definux/Emeraude" target="_blank" title="GitHub">GitHub</a>
+      <a class="btn btn-large btn-gray" href="https://github.com/Definux/Emeraude" target="_blank" title="GitHub">GITHUB</a>
     </p>
     <hr/>
     <div id="technologies">
