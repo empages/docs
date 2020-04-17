@@ -8,15 +8,16 @@ module.exports = {
         ['link', { rel: "stylesheet", type: "text/css", href: "/assets/fonts/mdi/css/materialdesignicons.min.css"}],
     ],
     plugins: [
+        ['@vuepress/back-to-top', true],
         [
             '@vuepress/google-analytics',
             {
-                ga: 'UA-92025616-4'
+                'ga': 'UA-92025616-4'
             }
         ]
     ],
     serviceWorker: true,
-    theme: 'vue',
+    theme: '@vuepress/vue',
     themeConfig: {
         repo: 'Definux/Emeraude',
         docsDir: 'docs',
