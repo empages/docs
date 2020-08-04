@@ -135,6 +135,7 @@ $breakpoints: (
   .search-box {
     input {
       border-radius: 2px !important;
+      margin-left: 1rem;
     }
   }
 
@@ -344,15 +345,15 @@ $breakpoints: (
 
   #features {
     .feature-list-row {
-      display: flex;
-
-      @include respond-below(sm) {
-        display: block;
-      }
+      display: block;
+      text-align: center;
 
       .feature-list-item {
-        width: 25%;
+        width: 22%;
         padding: 5px;
+        text-align: left;
+        display: inline-block;
+        vertical-align: top;
 
         @include respond-below(sm) {
           width: 46%;

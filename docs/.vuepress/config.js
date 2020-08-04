@@ -1,6 +1,6 @@
 module.exports = {
     title : 'Emeraude',
-    description : 'The Sparkling B2C Application Framework',
+    description : 'The Sparkling ASP.NET Application Framework',
     head: [
         ['link', { rel: "apple-touch-icon", href: "/assets/favicons/icon200.png"}],
         ['link', { rel: "icon", type: "image/x-icon", href: "/assets/favicons/icon32.ico"}],
