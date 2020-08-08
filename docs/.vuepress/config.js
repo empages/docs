@@ -31,8 +31,7 @@ module.exports = {
                 text: 'Samples',
                 ariaLabel: 'Samples Menu',
                 items: [
-                    { text: 'Web', link: 'https://github.com/Definux/DogApp.Web' },
-                    { text: 'Mobile', link: 'https://github.com/Definux/DogApp.Mobile' }
+                    { text: 'EmDoggo', link: 'https://github.com/Definux/EmDoggo' },
                 ]
 }
         ],
