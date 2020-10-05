@@ -27,8 +27,7 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      {{ repoLabel }}
-      <OutboundLink />
+      <i class="mdi mdi-github-box"></i> {{ repoLabel }}
     </a>
   </nav>
 </template>

@@ -22,7 +22,6 @@ module.exports = {
         repo: 'Definux/Emeraude',
         docsDir: 'docs',
         nav: [
-            { text: 'Home', link: '/' },
             { text: 'Guide', link: '/guide/introduction.html' },
             { text: 'Admin', link: '/admin/introduction.html' },
             { text: 'Client Builder', link: '/client-builder/introduction.html' },
@@ -39,7 +38,7 @@ module.exports = {
             '/guide/': [
                 {
                     title: 'Guide',  // required
-                    collapsable: false, // optional, defaults to true
+                    collapsable: true, // optional, defaults to true
                     sidebarDepth: 1,    // optional, defaults to 1
                     children: [
                         'introduction',
@@ -50,7 +49,7 @@ module.exports = {
                 },
                 {
                     title: 'Domain',
-                    collapsable: false,
+                    collapsable: true,
                     sidebarDepth: 1,
                     children: [
                         'system-entities',
@@ -61,7 +60,7 @@ module.exports = {
                 },
                 {
                     title: 'Infrastructure',
-                    collapsable: false,
+                    collapsable: true,
                     sidebarDepth: 1,
                     children: [
                         'create-a-service',
@@ -72,7 +71,7 @@ module.exports = {
                 },
                 {
                     title: 'Application',
-                    collapsable: false,
+                    collapsable: true,
                     sidebarDepth: 1,
                     children: [
                         'interfaces',
@@ -82,7 +81,7 @@ module.exports = {
                 },
                 {
                     title: 'Client',
-                    collapsable: false,
+                    collapsable: true,
                     sidebarDepth: 1,
                     children: [
                         'account',
@@ -95,7 +94,7 @@ module.exports = {
                 },
                 {
                     title: 'Misc',
-                    collapsable: false,
+                    collapsable: true,
                     sidebarDepth: 1,
                     children: [
                         'help-apis',
@@ -108,7 +107,7 @@ module.exports = {
             '/admin/': [
                 {
                     title: 'Administration',
-                    collapsable: false,
+                    collapsable: true,
                     sidebarDepth: 1,
                     children: [
                         'introduction',
@@ -118,7 +117,7 @@ module.exports = {
                 },
                 {
                     title: 'Auto CRUD',
-                    collapsable: false,
+                    collapsable: true,
                     sidebarDepth: 1,
                     children: [
                         'table-view',
@@ -132,7 +131,7 @@ module.exports = {
                 },
                 {
                     title: 'Layout',
-                    collapsable: false,
+                    collapsable: true,
                     sidebarDepth: 1,
                     children: [
                         'admin-menus',
@@ -146,18 +145,18 @@ module.exports = {
             '/client-builder/': [
                 {
                     title: 'Client Builder',
-                    collapsable: false,
+                    collapsable: true,
                     sidebarDepth: 1,
                     children: [
                         'introduction',
-                        'type-definition',
+                        'descriptions',
                         'building-entities',
                         'localization'
                     ]
                 },
                 {
                     title: 'Modules',
-                    collapsable: false,
+                    collapsable: true,
                     sidebarDepth: 1,
                     children: [
                         'web-modules',
@@ -170,7 +169,7 @@ module.exports = {
             '/mobile-sdk/': [
                 {
                     title: 'Mobile SDK',
-                    collapsable: false,
+                    collapsable: true,
                     sidebarDepth: 1,
                     children: [
                         'introduction',
