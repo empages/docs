@@ -54,7 +54,7 @@ generation and usage analytics.
 On the other hand client module is a lightweight part of Emeraude. By using the framework you will 
 receive authentication out of the box. You have the availability to use framework client
 with Razor if you are fan of C# view renderer engine. In case you are a fan of SPA technologies you can use
-any technology you like but the built-in one in the Emeraude is SSR Vue.js ([EmPages](/guide/em-pages.html)).
+any technology you like but the built-in one in the Emeraude is SSR Vue.js ([EmPages](/client/em-pages.html)).
 
 ## SDK
 

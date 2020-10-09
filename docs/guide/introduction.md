@@ -40,7 +40,7 @@ Emeraude use a large set of technologies which are separated on three main secti
 is important for the core of the project.  
 
 #### Back-end
-- .NET Core 3.1
+- {{ $themeConfig.constants.dotNetSdk }} {{ $themeConfig.constants.dotNetVersion }}
 - ASP.NET Core
 - Node.js
 

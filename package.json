@@ -6,7 +6,9 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "1.4.1",
     "@vuepress/plugin-google-analytics": "1.4.1",

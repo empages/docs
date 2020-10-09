@@ -19,11 +19,16 @@ module.exports = {
     serviceWorker: true,
     theme: '@vuepress/vue',
     themeConfig: {
+        constants: {
+            dotNetSdk: '.NET Core',
+            dotNetVersion: '3.1'
+        },
         repo: 'Definux/Emeraude',
         docsDir: 'docs',
         nav: [
             { text: 'Guide', link: '/guide/introduction.html' },
             { text: 'Admin', link: '/admin/introduction.html' },
+            { text: 'Client', link: '/client/introduction.html' },
             { text: 'Client Builder', link: '/client-builder/introduction.html' },
             { text: 'Mobile SDK', link: '/mobile-sdk/introduction.html' },
             {
@@ -43,8 +48,7 @@ module.exports = {
                     children: [
                         'introduction',
                         'architecture',
-                        'getting-started',
-                        'configuration'
+                        'getting-started'
                     ]
                 },
                 {
@@ -63,10 +67,12 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        'create-a-service',
-                        'emails-manager',
-                        'validators',
-                        'logger',
+                        'persistence',
+                        'identity',
+                        'localization',
+                        'files',
+                        'emails',
+                        'logger'
                     ]
                 },
                 {
@@ -80,16 +86,11 @@ module.exports = {
                     ]
                 },
                 {
-                    title: 'Client',
+                    title: 'Presentation',
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        'account',
-                        'em-pages',
-                        'ssr-initial-state',
-                        'localization',
-                        'api-controllers',
-                        'seo'
+
                     ]
                 },
                 {
@@ -106,7 +107,7 @@ module.exports = {
 
             '/admin/': [
                 {
-                    title: 'Administration',
+                    title: 'Admin Panel',
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
@@ -141,7 +142,50 @@ module.exports = {
                     ]
                 }
             ],
-
+            '/client/': [
+                {
+                    title: 'Client Side',
+                    collapsable: true,
+                    sidebarDepth: 1,
+                    children: [
+                        'introduction',
+                        'account'
+                    ]
+                },
+                {
+                    title: 'EmPages',
+                    collapsable: true,
+                    sidebarDepth: 1,
+                    children: [
+                        'em-pages',
+                        'ssr-initial-state'
+                    ]
+                },
+                {
+                    title: 'Localization',
+                    collapsable: true,
+                    sidebarDepth: 1,
+                    children: [
+                        'localization'
+                    ]
+                },
+                {
+                    title: 'Web API',
+                    collapsable: true,
+                    sidebarDepth: 1,
+                    children: [
+                        'api-controllers'
+                    ]
+                },
+                {
+                    title: 'SEO',
+                    collapsable: true,
+                    sidebarDepth: 1,
+                    children: [
+                        'seo'
+                    ]
+                }
+            ],
             '/client-builder/': [
                 {
                     title: 'Client Builder',
