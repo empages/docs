@@ -46,6 +46,7 @@ is important for the core of the project.
 
 #### Data storage
 - Microsoft SQL Server
+- PostgreSQL
 - SQLite
 - JSON files
 
@@ -60,5 +61,5 @@ is important for the core of the project.
 - Xamarin forms
 - Prism
 
-Of course almoust all technologies can be replaced with alternative ones but we suggest you to 
+Of course almost all technologies can be replaced with alternative ones but we suggest you to 
 do this in case when Emeraude does not fit the requirements of your project.

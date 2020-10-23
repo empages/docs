@@ -39,6 +39,15 @@ In case you setup the MS SQL Server on MacOS the procedure is a little bit more 
 the installation requires the Docker. Of course it is not a rocket science and you can handle it by 
 using the following instructions - [Run SQL Server container images with Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker).
 
+#### PostgreSQL
+Installation and configuration of PostgreSQL is not a huge challenge. You can follow the instructions from the [PostgreSQL official website](https://www.postgresql.org/).
+In addition if you are a MacOS user you can use brew:
+```
+$ brew install postgresql
+```
+
+In case you prefer to use the PostgreSQL container - Docker is another option for you.
+
 ### Tools
 **Emeraude** is a collection of many components and libraries which complexity gives the power of the framework.
 Of course the idea **Emeraude** is not to hard to use it. The idea of the framework is to write less code with predefined 

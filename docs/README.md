@@ -16,6 +16,9 @@ technologies:
 - name: Microsoft SQL Server
   url: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
   image: sqlserver.png
+- name: PostgreSQL
+  url: https://www.postgresql.org/
+  image: postgresql.png
 - name: SQLite
   url: https://www.sqlite.org/index.html
   image: sqlite.png
