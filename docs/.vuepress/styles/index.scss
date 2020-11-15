@@ -1,5 +1,15 @@
 @font-face {
-  font-family: "BankGothic"; src: url("/assets/fonts/BankGothicMedium.ttf");
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat/Montserrat-Medium.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat/Montserrat-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
 }
 
 $primary: #7eb62e;
@@ -13,17 +23,25 @@ $gray-light: #eaecef;
 $gray-dark: $menu-color;
 $gray-darker: $menu-color-dark;
 
+$text-color-primary: #1c1e2e;
+$text-color-secondary: lighten($text-color-primary, 25%);
+$text-color-light: lighten($text-color-primary, 40%);
+
 // Color configuration
 $accentColor: #7eb62e;
-$textColor: #2c3e50;
+$textColor: $menu-color;
 $borderColor: #eaecef;
 $codeBgColor: #282c34;
+
+$bg-light: #f5f5f5;
+$bg-dark: $text-color-primary;
 
 // Layout configuration
 $navbarHeight: 3.6rem;
 $sidebarWidth: 20rem;
 $contentWidth: 740px;
 $MQMobile: 719px;
+
 
 $breakpoints: (
   xxs: 420px,
@@ -82,6 +100,20 @@ $breakpoints: (
 ::selection {
   color: $white;
   background: $primary;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $text-color-secondary;
+  height: 100%;
+  * {
+    font-family: 'Montserrat', sans-serif;
+  }
 }
 
 .d-flex {
@@ -145,15 +177,15 @@ $breakpoints: (
 $navbar-vertical-padding: 0.7rem;
 $navbar-horizontal-padding: 1.5rem;
 
-.navbar {
+.navbar-main {
   padding: $navbar-vertical-padding $navbar-horizontal-padding;
   line-height: $navbarHeight - 1.4rem;
   a, span, img {
     display: inline-block;
   }
   .logo {
-    height: $navbarHeight - 1.4rem;
-    min-width: $navbarHeight - 1.4rem;
+    height: $navbarHeight - 1.6rem;
+    min-width: $navbarHeight - 1.6rem;
     margin-right: 0.8rem;
     vertical-align: top;
   }
@@ -207,7 +239,7 @@ $navbar-horizontal-padding: 1.5rem;
 }
 
 @media (max-width: $MQMobile) {
-  .navbar {
+  .navbar-main {
     padding-left: 4rem;
     .can-hide {
       display: none;
@@ -224,7 +256,7 @@ $navbar-horizontal-padding: 1.5rem;
   }
 }
 
-.navbar {
+.navbar-main {
   background-color: $menu-color !important;
   border-bottom: none !important;
 
@@ -235,7 +267,6 @@ $navbar-horizontal-padding: 1.5rem;
   .site-name {
     margin-left: 30px;
     text-transform: uppercase;
-    font-family: BankGothic;
     font-weight: 500;
     padding-left: 5px;
     font-size: 24px;
@@ -403,6 +434,54 @@ $navbar-horizontal-padding: 1.5rem;
 }
 
 #homepage {
+  .navbar {
+    position: unset !important;
+    height: unset !important;
+    padding: unset;
+    border-bottom: unset;
+
+    .navbar-toggler {
+      border: none !important;
+      outline: unset !important;
+    }
+
+    .navbar-collapse {
+      @include respond-below(md) {
+        &.show {
+          background: $white;
+          width: 100%;
+          position: absolute;
+          top: 50px;
+          text-align: center;
+          left: 0;
+          right: 0;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          .nav-item {
+            width: 100%;
+            margin: 0;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            .nav-link {
+              width: 100%;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+
+      &.collapsing {
+        display: none !important;
+      }
+    }
+  }
+
+  .nav-links a {
+    padding: 0.5rem 0 0 0 !important;
+    font-weight: bold;
+    color: $black;
+  }
+
   .brand-container {
     text-align: center;
     padding-top: 40px;
@@ -420,7 +499,6 @@ $navbar-horizontal-padding: 1.5rem;
       .title {
         font-size: 7vw;
         color: $black;
-        font-family: BankGothic;
         font-weight: 400;
         text-transform: uppercase;
         margin-top: 0px;
@@ -441,13 +519,33 @@ $navbar-horizontal-padding: 1.5rem;
         }
       }
     }
-  }
 
+
+  }
+  .tech-list-container {
+    width: 100%;
+    padding: 10px 15px;
+    text-align: center;
+
+    .tech-item {
+      display: inline-block;
+      margin: 10px;
+
+      img {
+        height: 60px;
+        @include respond-below(xxs) {
+          max-width: 100px;
+          height: unset;
+        }
+      }
+    }
+  }
   .hp-header {
     margin-top: 50px;
     margin-bottom: 50px;
 
     .hp-title {
+      margin-top: 0px;
       border-bottom: none;
       font-weight: bold;
       font-size: 30px;
@@ -471,28 +569,18 @@ $navbar-horizontal-padding: 1.5rem;
     }
   }
 
-  #technologies {
-    .tech-list-container {
-      width: 100%;
-      padding: 10px 15px;
-      text-align: center;
+  #features {
+    padding-top: 30px;
+    margin-top: 70px;
+    background-image: linear-gradient(180deg, $bg-light 0, $white 70%);
+    background-repeat: repeat-x;
 
-      .tech-item {
-        display: inline-block;
-        margin: 10px;
-
-        img {
-          height: 100px;
-          @include respond-below(xxs) {
-            max-width: 100px;
-            height: unset;
-          }
-        }
+    @include respond-below(mobile) {
+      .hp-header {
+        margin: 0px;
       }
     }
-  }
 
-  #features {
     .feature-list-row {
       display: block;
       text-align: center;
@@ -534,9 +622,32 @@ $navbar-horizontal-padding: 1.5rem;
   }
 
   #support {
+    background: $primary;
+    padding: 10px;
+    padding-top: 40px;
+    .hp-header {
+      margin: 0px;
+      color: $white;
+      .hp-title {
+        margin: 0px !important;
+      }
+    }
+
     .donate-section {
       text-align: center;
-      margin-bottom: 60px;
+      .btn {
+        margin-bottom: 30px;
+        background: $menu-color !important;
+        color: $white !important;
+      }
+
+      @include respond-below(mobile) {
+        .btn {
+          margin: 5px;
+        }
+
+        padding-bottom: 20px;
+      }
     }
   }
 
@@ -550,4 +661,35 @@ $navbar-horizontal-padding: 1.5rem;
   border-top: 1px solid $borderColor;
   text-align: center;
   color: lighten($textColor, 25%);
+}
+
+.site-logo {
+  .logo-icon {
+    height: 34px;
+  }
+}
+
+.main-section {
+  .headline {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .subheadline {
+    font-size: 1.25rem;
+  }
+}
+
+.section-title {
+  font-size: 2.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  max-width: 760px;
+}
+
+.logo-container {
+  img {
+    width: 180px;
+  }
 }

@@ -1,6 +1,6 @@
 module.exports = {
-    title : 'Emeraude',
-    description : 'The Sparkling ASP.NET Application Framework',
+    title : 'Emeraude Framework',
+    description : 'The technological excellence.',
     head: [
         ['link', { rel: "apple-touch-icon", href: "/assets/favicons/icon200.png"}],
         ['link', { rel: "icon", type: "image/x-icon", href: "/assets/favicons/icon32.ico"}],
@@ -17,8 +17,8 @@ module.exports = {
         ]
     ],
     serviceWorker: true,
-    theme: '@vuepress/vue',
     themeConfig: {
+        logo: '/assets/images/logo_text_white.svg',
         constants: {
             dotNetSdk: '.NET Core',
             dotNetVersion: '3.1'
@@ -26,21 +26,14 @@ module.exports = {
         repo: 'Definux/Emeraude',
         docsDir: 'docs',
         nav: [
-            { text: 'Guide', link: '/guide/introduction.html' },
+            { text: 'Core', link: '/core/introduction.html' },
             { text: 'Admin', link: '/admin/introduction.html' },
             { text: 'Client', link: '/client/introduction.html' },
             { text: 'Client Builder', link: '/client-builder/introduction.html' },
             { text: 'Mobile SDK', link: '/mobile-sdk/introduction.html' },
-            {
-                text: 'Samples',
-                ariaLabel: 'Samples Menu',
-                items: [
-                    { text: 'EmDoggo', link: 'https://github.com/Definux/EmDoggo' },
-                ]
-}
         ],
         sidebar: {
-            '/guide/': [
+            '/core/': [
                 {
                     title: 'Guide',  // required
                     collapsable: true, // optional, defaults to true

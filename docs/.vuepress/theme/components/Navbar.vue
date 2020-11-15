@@ -1,5 +1,5 @@
 <template>
-  <header class="navbar">
+  <header class="navbar-main">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
     <RouterLink
       :to="$localePath"
@@ -11,12 +11,6 @@
         :src="$withBase($site.themeConfig.logo)"
         :alt="$siteTitle"
       >
-      <span
-        v-if="$siteTitle"
-        ref="siteName"
-        class="site-name"
-        :class="{ 'can-hide': $site.themeConfig.logo }"
-      >{{ $siteTitle }}</span>
     </RouterLink>
 
     <div

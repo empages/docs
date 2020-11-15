@@ -25,7 +25,7 @@ public class VueExampleModule : ScaffoldModule
 }
 ```
 
-## Module Constructor
+## Module Properties
 The information that you can provide in the constructor is vital for the generation process.
 The meaning of each property is:
 - *Name* - Name of the module. *Emeraude* uses naming convention with the related technology in front of the name ('Vue Example' for Vue module).
@@ -33,6 +33,23 @@ The meaning of each property is:
 It is maybe the most important property because if it is set incorrectly the *ClientBuilder* can destroy your custom code.
 - *Type* - The instance type of the module (Undefined/Web/Mobile).
 - *Order* - [Optional] The order of execution in case you use the bulk generation engine for web or mobile modules.
+- *Icon* - Icon of the module in base64 format.
+- *ScaffoldTypeName* - Type name of the module. The main use of this property is to give the name of the grouped modules ('Vue' for example).
+- *ParentModuleId* - Identification of the module that allows easy modules grouping ('vue.scaffold.module' for example).
+
+For example an abstract module for Vue code generation would be written that way:
+```cs
+public abstract class VueScaffoldModule : ScaffoldModule
+{
+    public VueScaffoldModule(string name, bool locked)
+        : base(name, InstanceType.WebModule, locked)
+    {
+        this.Icon = Convert.ToBase64String(Resources.vuejs);
+        this.ScaffoldTypeName = "Vue";
+        this.ParentModuleId = "vue.scaffold.module";
+    }
+}
+```
 
 ## Module Workflow
 Each module is defined by specified workflow which starts from data extraction from databases of the application, 
