@@ -39,17 +39,17 @@
                     },
                     {
                         title: "Vue SSR",
-                        desc: "Similar behavior like Nuxt.js but built for .NET developers and simplify like never before.",
+                        desc: "Built-in server pre-rendering engine for Vue SSR applications with SPA functionality.",
                         icon: "mdi mdi-vuejs"
                     },
                     {
                         title: "In-app Code Generation",
-                        desc: "Fully customizable code generation for the purposes of web/mobile development.",
+                        desc: "Fully customizable internal code generation for the purposes of web/mobile development.",
                         icon: "mdi mdi-state-machine"
                     },
                     {
                         title: "Encapsulated Authentication",
-                        desc: "Built views/controllers/view-models for all authentication stuff.",
+                        desc: "Built-in actions and views for MVC and API authentication.",
                         icon: "mdi mdi-account-key"
                     },
                     {

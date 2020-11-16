@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="footer">
-            <p class="my-4">
+            <p class="my-4 px-2">
               {{ data.license }} • Copyright © {{ new Date().getFullYear() }} <a href="https://definux.io/" target="_blank">Definux</a>
             </p>
         </div>
