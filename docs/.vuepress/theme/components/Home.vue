@@ -21,7 +21,9 @@
             <div>
               <features-section/>
             </div>
-
+            <div>
+              <sponsors-sections/>
+            </div>
             <div id="support">
                 <div class="hp-header">
                     <h2 class="hp-title">Support Us</h2>
@@ -47,13 +49,15 @@
     import NavLinks from "@theme/components/HomeNavLinks";
     import MainSection from "@theme/components/Sections/MainSection";
     import FeaturesSection from "@theme/components/Sections/FeaturesSection";
+    import SponsorsSections from "@theme/components/Sections/SponsorsSections";
     export default {
         name: 'Home',
         components: {
             NavLink,
             NavLinks,
             MainSection,
-            FeaturesSection
+            FeaturesSection,
+            SponsorsSections
         },
 
         computed: {
