@@ -1,15 +1,17 @@
 # Architecture
 Emeraude is built on onion-based software architecture following the trends in the 
-business. More specific - the framework is created by Clean Architecture. Each application 
-developed on the top of Emeraude is recommended to be built by clean architecture either.
-Emeraude has specific separation on 3 main parts:
+business. More specific - the framework is created by Clean Architecture - 3 layers of Clean Architecture. The
+idea of that multi-level architecture is to be made clean separation between the framework and application 
+structures. Basically each application developed on the top of Emeraude is recommended to be built by clean architecture 
+and will take the place on the top of the architecture layers. Each layer has its own structure but in general
+all layers follow the units of the Emeraude:
 - Core - define the main engine of the framework
 - Admin - define core inheritance for the purposes of administration panel
 - Client - define core inheritance for the purposes of public (client) part of the system 
 
 On the following graphic you can see the structure of the architecture: 
 
-![Architecture](/assets/images/architecture-clean-1.jpg)
+![Architecture](/assets/images/Emeraude_architecture.svg)
 
 Like the most popular clean architecture implementation Emeraude is nothing different than the
 main 4 elements - domain, application, infrastructure and presentation. This separation allows
