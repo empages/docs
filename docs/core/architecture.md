@@ -11,7 +11,9 @@ all layers follow the units of the Emeraude:
 
 On the following graphic you can see the structure of the architecture: 
 
-![Architecture](/assets/images/Emeraude_architecture.svg)
+<div class="d-flex">
+    <img class="img-main" src="/assets/images/Emeraude_architecture.svg"/>
+</div>
 
 Like the most popular clean architecture implementation Emeraude is nothing different than the
 main 4 elements - domain, application, infrastructure and presentation. This separation allows
