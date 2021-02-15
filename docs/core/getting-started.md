@@ -126,11 +126,28 @@ will be read by the framework.
 #### Database connection string
 ```json
 "ConnectionStrings": {
-  "DatabaseConnection": "{{ your database connection string }}"
+  "EntityContext": "{{ your database connection string }}",
+  "LoggerContext": "{{ your logger connection string }}"
 },
 ```
 Based on the type of the database your connection string can be in different format. All different formats
 can be found at [www.connectionstrings.com](https://www.connectionstrings.com/).
+
+After all connection strings are applied you can trigger the Entity Framework migration process as follows:
+```shell
+# For EntityContext
+dotnet ef migrations add MigrationName -c EntityContext -s .\src\web\YourProject -p .\src\web\YourProject.Infrastructure -o .\Persistence\Migrations
+dotnet ef database update -c EntityContext -s .\src\web\YourProject -p .\src\web\YourProject.Infrastructure
+
+# For LoggerContext
+dotnet ef migrations add Init -c LoggerContext -s .\src\web\YourProject -p .\src\web\YourProject.Infrastructure -o .\Logger\Migrations
+dotnet ef database update -c LoggerContext -s .\src\web\YourProject -p .\src\web\YourProject.Infrastructure
+```
+Current terminal commands are valid in case you are in the solution directory. 
+
+While the **EntityContext** is under your definition and control and you are able to set unlimited migrations 
+based on your data concept, **LoggerContext** is predefined into the Emeraude packages so to apply the logger you 
+need only to specify the database connecton and everything else is comming out of the box.
 
 #### JSON web token
 ```json
