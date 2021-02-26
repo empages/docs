@@ -1,0 +1,40 @@
+$primary: #7eb62e;
+$secondary: #508800;
+$menu-color: #23282d;
+$menu-color-dark: #191e23;
+$menu-color-light: #32373c;
+$white: #fff;
+$black: #000;
+$gray-light: #eaecef;
+$gray-dark: $menu-color;
+$gray-darker: $menu-color-dark;
+
+$text-color-primary: #1c1e2e;
+$text-color-secondary: lighten($text-color-primary, 25%);
+$text-color-light: lighten($text-color-primary, 40%);
+
+// Color configuration
+$accentColor: #7eb62e;
+$textColor: $menu-color;
+$borderColor: #eaecef;
+$codeBgColor: #282c34;
+$arrowBgColor: #cccccc;
+$badgeTipColor: #42b983;
+$badgeWarningColor: darken(#ffe564, 35%);
+$badgeErrorColor: #DA5961;
+
+$bg-light: #f5f5f5;
+$bg-dark: $text-color-primary;
+
+// Layout configuration
+$navbarHeight: 3.6rem;
+$sidebarWidth: 20rem;
+$contentWidth: 740px;
+
+// responsive breakpoints
+$MQNarrow: 959px;
+$MQMobile: 719px;
+$MQMobileNarrow: 419px;
+
+$lineNumbersWrapperWidth: 3.5rem;
+$codeLang: js ts html md vue css sass scss less stylus go java c sh yaml py docker dockerfile makefile;
