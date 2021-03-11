@@ -3,13 +3,14 @@ $secondary: #508800;
 $menu-color: #23282d;
 $menu-color-dark: #191e23;
 $menu-color-light: #32373c;
+$sidebar-open-inside: #32373c;
 $white: #fff;
 $black: #000;
 $gray-light: #eaecef;
 $gray-dark: $menu-color;
 $gray-darker: $menu-color-dark;
 
-$text-color-primary: #1c1e2e;
+$text-color-primary: #000000;
 $text-color-secondary: lighten($text-color-primary, 25%);
 $text-color-light: lighten($text-color-primary, 40%);
 
@@ -28,7 +29,7 @@ $bg-dark: $text-color-primary;
 
 // Layout configuration
 $navbarHeight: 3.6rem;
-$sidebarWidth: 20rem;
+$sidebarWidth: 16rem;
 $contentWidth: 740px;
 
 // responsive breakpoints

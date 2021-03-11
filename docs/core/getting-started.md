@@ -102,8 +102,8 @@ to clone some repository with ready to use project, or you can use **Emeraude CL
 ```
 em create -n MyProjectName
 ```
-the CLI will create for you a new project by clone the [EmDoggo](https://github.com/Definux/EmDoggo) repository and 
-rename all files and namespaces with the name of your project. So that's it. Your project is created. 
+the CLI will create for you a new project by cloning the [Emeraude.Template](https://github.com/Definux/Emeraude.Template) repository and 
+rename all files and namespaces with the name of your project.
 Your project is going to have the following structure:
 - **MyProjectName** - (folder contains the main web project (presentation layer of the application))
 - **MyProjectName.Application** - (folder contains the application requests and contracts)

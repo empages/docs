@@ -6,8 +6,8 @@
                 <h3 class="hp-subtitle">{{ subTitle }}</h3>
             </div>
             <div class="feature-list">
-                <div class="feature-list-row">
-                    <div :key="'feature-index-' + featureIndex" class="feature-list-item"
+                <div class="feature-list-row row">
+                    <div :key="'feature-index-' + featureIndex" class="feature-list-item col-sm-3"
                          v-for="(feature, featureIndex) in features">
                         <div class="d-flex">
                             <p :class="feature.icon"></p>

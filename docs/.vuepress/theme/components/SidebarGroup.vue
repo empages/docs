@@ -4,7 +4,9 @@
     :class="[
       {
         collapsable,
-        'is-sub-group': depth !== 0
+        'is-sub-group': depth !== 0,
+        open,
+        'active': isGroupActive
       },
       `depth-${depth}`
     ]"
@@ -13,8 +15,7 @@
       v-if="item.path"
       class="sidebar-heading clickable"
       :class="{
-        open,
-        'active': isActive($route, item.path)
+        open
       }"
       :to="item.path"
       @click.native="$emit('toggle')"
@@ -76,7 +77,11 @@ export default {
   beforeCreate () {
     this.$options.components.SidebarLinks = require('@theme/components/SidebarLinks.vue').default
   },
-
+  computed: {
+    isGroupActive() {
+      return this.item.children.filter(x => isActive(this.$route, x.path)).length;
+    }
+  },
   methods: { isActive }
 }
 </script>

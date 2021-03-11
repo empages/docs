@@ -1,0 +1,136 @@
+.sidebar {
+  background-color: $menu-color !important;
+  overflow-y: scroll;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  .nav-links {
+    display: none;
+    border-bottom: 1px solid $borderColor;
+    padding: 0.5rem 0 0.75rem 0;
+    a {
+      font-weight: 600;
+    }
+    .nav-item, .repo-link {
+      display: block;
+      line-height: 1rem;
+      font-size: 14px;
+      padding: 0.5rem 0 0.5rem 1.5rem;
+      .sidebar-links {
+        padding: 1.5rem 0;
+
+        a.sidebar-link {
+          font-size: 14px;
+          line-height: 1rem;
+          font-weight: bold;
+        }
+
+        li:not(:first-child) {
+          margin-top: .75rem;
+        }
+      }
+    }
+
+    .nav-item {
+      .nav-link {
+        color: $white !important;
+        padding: 0 !important;
+      }
+
+      .dropdown-title {
+        color: $white !important;
+      }
+    }
+
+    .repo-link {
+      color: $white !important;
+    }
+
+    @include respond-below(mobile) {
+      display: block;
+
+      .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after {
+        top: calc(1rem - 2px);
+      }
+
+      .sidebar-links {
+        padding: 1rem 0;
+      }
+    }
+  }
+
+  .sidebar-links {
+    > li {
+      .sidebar-group {
+        .sidebar-heading {
+          display: flex;
+          .arrow {
+            position: unset;
+            top: unset;
+            left: unset;
+            margin: auto 0 auto auto;
+          }
+        }
+
+        &.open {
+          background: $sidebar-open-inside;
+          padding-bottom: 5px;
+        }
+      }
+
+      .sidebar-heading {
+        color: $white !important;
+        font-size: 16px;
+        font-weight: normal;
+        &.open {
+          background-color: $menu-color-dark !important;
+          color: $primary !important;
+        }
+      }
+
+      .sidebar-group-items {
+        .sidebar-link {
+          padding-left: 1.25rem;
+          color: $white !important;
+          font-size: 14px;
+
+          &:hover {
+            color: $primary !important;
+          }
+
+          &.active {
+            color: $primary !important;
+          }
+        }
+
+        .sidebar-sub-header {
+          margin-left: 0.5rem;
+          border-left: 1px solid $white;
+
+          .sidebar-link {
+            font-weight: normal;
+            padding-left: 0.4rem;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .sidebar-group {
+        &.active {
+          .sidebar-heading {
+            background-color: $primary !important;
+            color: $white !important;
+          }
+        }
+      }
+    }
+  }
+}
