@@ -21,20 +21,17 @@
                 v-if="showSuggestions"
                 class="suggestions"
                 :class="{ 'align-right': alignRight }"
-                @mouseleave="unfocus"
-        >
+                @mouseleave="unfocus">
             <li
                     v-for="(s, i) in suggestions"
                     :key="i"
                     class="suggestion"
                     :class="{ focused: i === focusIndex }"
                     @mousedown="go(i)"
-                    @mouseenter="focus(i)"
-            >
+                    @mouseenter="focus(i)">
                 <a
                         :href="s.path"
-                        @click.prevent
-                >
+                        @click.prevent>
                     <span class="page-title">{{ s.title || s.path }}</span>
                     <span
                             v-if="s.header"

@@ -1,5 +1,5 @@
 <template>
-    <div id="features" class="pb-5">
+    <div id="features" class="pb-5 px-2">
         <div class="container">
             <div class="hp-header">
                 <h2 class="hp-title">{{ mainTitle }}</h2>

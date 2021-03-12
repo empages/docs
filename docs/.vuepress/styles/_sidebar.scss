@@ -112,13 +112,24 @@
         }
 
         .sidebar-sub-header {
-          margin-left: 0.5rem;
-          border-left: 1px solid $white;
+          margin-left: 1.2rem;
+          width: 100%;
+          position: relative;
 
           .sidebar-link {
             font-weight: normal;
             padding-left: 0.4rem;
             font-size: 12px;
+
+            &::before {
+              content: '\F423';
+              font-family: "Material Design Icons", serif;
+              position: absolute;
+              left: -0.5rem;
+              font-size: 12px;
+              line-height: 17px;
+              color: $white;
+            }
           }
         }
       }
@@ -128,6 +139,14 @@
           .sidebar-heading {
             background-color: $primary !important;
             color: $white !important;
+          }
+
+          .sidebar-sub-header {
+            .active {
+              &::before {
+                color: $primary;
+              }
+            }
           }
         }
       }

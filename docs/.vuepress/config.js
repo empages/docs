@@ -19,10 +19,12 @@ module.exports = {
     serviceWorker: true,
     themeConfig: {
         logo: '/assets/images/logo_text_white.svg',
+        logoMobile: '/assets/images/logo_white.svg',
         constants: {
             dotNetSdk: '.NET Core',
             dotNetVersion: '3.1'
         },
+        searchPlaceholder: 'Search',
         repo: 'Definux/Emeraude',
         docsDir: 'docs',
         nav: [

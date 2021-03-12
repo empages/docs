@@ -1,31 +1,36 @@
 <template>
-  <header class="navbar-main">
-    <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
-    <RouterLink
-      :to="$localePath"
-      class="home-link"
-    >
-      <img
-        v-if="$site.themeConfig.logo"
-        class="logo"
-        :src="$withBase($site.themeConfig.logo)"
-        :alt="$siteTitle"
-      >
-    </RouterLink>
+  <div class="navbar-main row">
+    <div class="w-100 h-100">
+      <div class="d-flex h-100 w-100">
+        <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
+        <RouterLink
+            :to="$localePath"
+            class="home-link h-100">
+          <img
+              v-if="$site.themeConfig.logo"
+              class="logo"
+              :src="$withBase($site.themeConfig.logo)"
+              :alt="$siteTitle">
+          <img
+              v-if="$site.themeConfig.logoMobile"
+              class="logo-mobile"
+              :src="$withBase($site.themeConfig.logoMobile)"
+              :alt="$siteTitle">
+        </RouterLink>
 
-    <div
-      class="links"
-      :style="linksWrapMaxWidth ? {
-        'max-width': linksWrapMaxWidth + 'px'
-      } : {}"
-    >
-
-      <NavLinks class="can-hide" />
+        <div
+            class="links position-relative my-auto"
+            :style="linksWrapMaxWidth ? { 'max-width': linksWrapMaxWidth + 'px' } : {}">
+          <NavLinks class="can-hide" />
+        </div>
+        <SearchBox class="mr-0 ml-3" />
+      </div>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>
+import SearchBox from '@theme/components/SearchBox.vue'
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
 
@@ -33,6 +38,7 @@ export default {
   name: 'Navbar',
 
   components: {
+    SearchBox,
     SidebarButton,
     NavLinks
   },

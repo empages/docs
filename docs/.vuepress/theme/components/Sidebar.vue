@@ -1,6 +1,5 @@
 <template>
   <aside class="sidebar">
-    <SearchBox />
     <NavLinks />
 
     <slot name="top" />
@@ -14,14 +13,13 @@
 </template>
 
 <script>
-import SearchBox from '@theme/components/SearchBox.vue'
 import SidebarLinks from '@theme/components/SidebarLinks.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
 
 export default {
   name: 'Sidebar',
 
-  components: { SidebarLinks, NavLinks, SearchBox },
+  components: { SidebarLinks, NavLinks },
 
   props: ['items']
 }

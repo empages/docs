@@ -18,8 +18,7 @@
         open
       }"
       :to="item.path"
-      @click.native="$emit('toggle')"
-    >
+      @click.native="$emit('toggle')">
       <span>{{ item.title }}</span>
       <span
         v-if="collapsable"
@@ -32,8 +31,7 @@
       v-else
       class="sidebar-heading"
       :class="{ open }"
-      @click="$emit('toggle')"
-    >
+      @click="$emit('toggle')">
       <span>{{ item.title }}</span>
       <span
         v-if="collapsable"
