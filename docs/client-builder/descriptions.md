@@ -6,65 +6,87 @@ aspects. **Emeraude Client Builder** provides to developers the ability to simpl
 use abstractions and as a result a new code can be created (generated).
 
 With the help of static service called **DescriptionExtractor** each C# class with reasonable complexity can be transformed into
-simple and easy to read use class. The available abstractions are as follows:
+simple and easy to read use class. 
 
-## Type Description
-**TypeDescription** is one of the main classes which describe a type from C# object/primitive. The provided properties of 
-this type are:
+::: warning IMPORTANT
+**DescriptionExtractor** is using recursion to define and transform the different description types. Take into account
+that using it for types which have circular references might cause an infinite recursion.
+:::
 
-| Property           | Type                    | Description                                                          |
-|--------------------|-------------------------|----------------------------------------------------------------------|
-| Name               | string                  | Short name of the type.                                              |
-| FullName           | string                  | Full name of the type containing the namespace.                      |
-| JavaScriptTypeName | string                  | Translated type for JavaScript programming language.                 |
-| IsCollection       | bool                    | Indicates that the type is a collection (list, array, etc.)          |
-| IsNullable         | bool                    | Indicates that the type is nullable.                                 |
-| IsEnum             | bool                    | Indicates that the type is enumeration.                              |
-| IsComplexType      | bool                    | Indicates that the type is not primitive type.                       |
-| EnumValues         | Dictionary\<string, int>| Provides the enumeration keys and values if **IsEnum** is true.      |
-| ComplexType        | ClassDescription        | Provides the complex type of the class if **IsComplexType** is true. |
+The available abstractions used by the facade extractor are as follows:
 
-## ClassDescription
-**ClassDescription** describes a C# class and is quite similar like the **TypeDescription**. The usage of this class is mainly to
-describe a data transfer object (Example: ViewModel class).
+## Type Descriptions
+**TypeDescriptions** are simplified assembly descriptions and one of the main classes which describe a type from C# object/primitive. They provide:
 
-| Property                                  | Type              | Description                                                                                                |
-|-------------------------------------------|-------------------|------------------------------------------------------------------------------------------------------------|
-| Name                                      | string            | Short name of the class.                                                                                   |
-| FullName                                  | string            | Full name of the class containing the namespace.                                                           |
-| JavaScriptTypeName                        | string            | Translated type for JavaScript programming language.                                                       |
-| Properties                                | List\<PropertyDescription> | A list that contains definitions for each property of the class.                                           |
-| IsComplex                                 | bool              | Indicates that the type of the class is not assignable from primitive type.                                |
-| ConstructorArgumentsListString            | string            | Returns a string that visualize the properties as a function arguments, separated with comma.              |
-| ConstructorStrongTypedArgumentsListString | string            | Returns a string that visualize the properties as a function strong typed arguments, separated with comma. |
+###### ConstructorArgumentsListString `property`
+Constructor arguments names of the class, separated with comma and join into a string.
 
-## PropertyDescription
-**Property** is direct related with **ClassDescription** and its main purpose is to describe a property from a class.
+###### ConstructorStrongTypedArgumentsListString `property`
+Constructor arguments names of the endpoint, separated with comma and join into a string with their types.
 
-| Property     | Type    | Description                                                    |
-|--------------|---------|----------------------------------------------------------------|
-| Name         | string  | Short name of the property.                                    |
-| ReadOnly     | bool    | Indicates that the property has setter or not.                 |
-| Type         | TypeDescription | Provides the type of the property in **TypeDescription** format.       |
-| DefaultValue | string  | Returns the default value of the property (Example: int => 0). |
+###### EnumValues `property`
+Enumeration values in case when type is enum.
 
+###### FullName `property`
+Full name of the class.
 
-## ResponseDescription
+###### IsCollection `property`
+Indicates that the type is collection or not.
+
+###### IsComplex `property`
+Indicates that the type is primitive type (false) or not (true).
+
+###### IsEnum `property`
+
+Indicates that the type is enumeration or not.
+
+###### IsGenericType `property`
+Indicates that the type is generic type or not.
+
+###### IsNullable `property`
+Indicates that the type is nullable or not.
+
+###### JavaScriptTypeName `property`
+JavaScript name of the class.
+
+###### Name `property`
+Name of the class.
+
+###### Properties `property`
+List of all properties of the class.
+
+## Property Descriptions
+**Properties** are directly related with **TypeDescription** and its main purpose is to describe a property from a class.
+They provide:
+
+###### DefaultValue `property`
+Default value for the current type.
+
+###### Name `property`
+Name of the property.
+
+###### ReadOnly `property`
+Indicates whether the property is read-only or not.
+
+###### Type `property`
+Type description of the property.
+
+## Response Descriptions
 **ResponseDescription** is a helper class that provides description for a method result, mainly used for extraction the result types of 
-controller actions.
+controller actions. They provide:
 
-| Property     | Type     | Description                                     |
-|--------------|----------|-------------------------------------------------|
-| Void         | bool     | Indicates that the result have a result or not. |
-| Class        | ClassDescription | Provides the class of the response.             |
-| IsCollection | bool     | Indicates that the result is a collection.      |
+###### Type `property`
+Type description of the response.
 
-## ArgumentDescription
+###### Void `property`
+Indicates whether the response is void.
+
+## Argument Descriptions
 **ArgumentDescription** is a helper class that provides description for a method argument, mainly used for extraction the result types of 
 controller actions.
 
-| Property     | Type     | Description                                  |
-|--------------|----------|----------------------------------------------|
-| Name         | string   | Returns the name of the argument.            |
-| Class        | ClassDescription | Provides the class of the argument.          |
-| IsCollection | bool     | Indicates that the argument is a collection. |
+###### Name `property`
+Name of the argument.
+
+###### Type `property`
+Type description of the argument.
