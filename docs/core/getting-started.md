@@ -175,19 +175,21 @@ available too but for the purposes of **Emeraude** is not applicable.
 
 #### External OAuth2 providers options
 ```json
-"ExternalOAuth2ProviderOptions": {
-  "FacebookSettings": {
-    "AppId": "{{ Facebook application id }}",
-    "AppSecret": "{{ Facebook application secret }}"
-  },
-  "GoogleSettings": {
-    "ClientId": "{{ Google client id }}",
-    "ClientSecret": "{{ Google client secret }}"
-  }
-},
+"ExternalOAuth2ProvidersOptions": [
+    {
+        "Name": "Facebook",
+        "ClientId": "{{ Facebook application id }}",
+        "ClientSecret": "{{ Facebook application secret }}"
+    },
+    {
+        "Name": "Google",
+        "ClientId": "{{ Google client id }}",
+        "ClientSecret": "{{ Google client secret }}"
+    }
+],
 ```
-Apply these options in case you want to use external authentication via Facebook and/or Google. These authentication providers 
-are built-in and in case you want to use different provider you have to implement your own options.
+Apply these options in case you want to use external authentication via Facebook, Google and/or some other. These authentication providers 
+(Facebook & Google) are built-in and in case you want to use a different provider you have to place your own options following the current structure.
 
 #### SMTP options
 ```json
