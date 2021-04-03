@@ -53,8 +53,7 @@ module.exports = {
                     children: [
                         'system-entities',
                         'entity-inheritance',
-                        'value-objects',
-                        'domain-services'
+                        'value-objects'
                     ]
                 },
                 {
@@ -75,9 +74,10 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        'interfaces',
-                        'queries',
-                        'commands'
+                        'services',
+                        'requests',
+                        'models',
+                        'mapping'
                     ]
                 },
                 {
@@ -85,7 +85,9 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-
+                        'abstractions',
+                        'decoration',
+                        'styles'
                     ]
                 },
                 {
@@ -93,9 +95,9 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        'help-apis',
-                        'data-seed',
-                        'constants'
+                        'scaffolding',
+                        'constants',
+                        'external-resources'
                     ]
                 },
             ],
@@ -108,32 +110,21 @@ module.exports = {
                     children: [
                         'introduction',
                         'features',
+                        'authentication',
                         'authorization'
                     ]
                 },
                 {
-                    title: 'Auto CRUD',
+                    title: 'Customization',
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        'table-view',
-                        'details-view',
-                        'create-form',
-                        'edit-form',
-                        'selectable-gallery',
-                        'admin-crud-controllers',
-                        'admin-child-crud-controllers'
-                    ]
-                },
-                {
-                    title: 'Layout',
-                    collapsable: true,
-                    sidebarDepth: 1,
-                    children: [
+                        'entity-controllers',
+                        'view-models',
+                        'ui-elements',
                         'admin-menus',
-                        'admin-controllers',
-                        'breadcrumbs',
-                        'customization'
+                        'dashboard',
+                        'layout'
                     ]
                 }
             ],
@@ -152,15 +143,9 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        'em-pages',
-                        'ssr-initial-state'
-                    ]
-                },
-                {
-                    title: 'Localization',
-                    collapsable: true,
-                    sidebarDepth: 1,
-                    children: [
+                        'workflow',
+                        'creating-an-empage',
+                        'front-end-usage',
                         'localization'
                     ]
                 },
@@ -169,7 +154,8 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        'api-controllers'
+                        'provided-endpoints',
+                        'creating-an-endpoint'
                     ]
                 },
                 {
@@ -177,7 +163,8 @@ module.exports = {
                     collapsable: true,
                     sidebarDepth: 1,
                     children: [
-                        'seo'
+                        'sitemap',
+                        'meta-tags'
                     ]
                 }
             ],
