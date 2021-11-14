@@ -2,8 +2,8 @@
   "name": "emeraude-docs",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Definux/Emeraude.Docs",
-  "author": "Definux",
+  "repository": "https://github.com/emeraudeframework/docs",
+  "author": "Georgi Karagogov",
   "license": "MIT",
   "scripts": {
     "dev": "vitepress dev src",

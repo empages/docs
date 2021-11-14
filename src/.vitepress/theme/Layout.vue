@@ -102,7 +102,7 @@ const pageClasses = computed(() => {
 
     <div class="footer text-center" :class="{ 'with-sidebar': showSidebar }">
       <p class="my-4 px-2">
-        Apache License 2.0 • Copyright © {{ new Date().getFullYear() }} <a href="https://definux.io/" target="_blank">Definux</a>
+        Apache License 2.0 • Copyright © {{ new Date().getFullYear() }} <a href="https://georgi.karagogov.com/" target="_blank">Georgi Karagogov</a>
       </p>
     </div>
   </div>

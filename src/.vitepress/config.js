@@ -9,7 +9,7 @@ module.exports = {
     ],
     themeConfig: {
         logo: '/_assets/images/logo_text.svg',
-        repo: 'Definux/Emeraude',
+        repo: 'emeraudeframework/emeraude',
         editLinks: true,
         editLinkText: 'Edit this page on GitHub',
         lastUpdated: 'Last Updated',
