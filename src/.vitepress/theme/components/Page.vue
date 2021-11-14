@@ -1,10 +1,20 @@
 <script setup>
 import PageFooter from './PageFooter.vue'
 import NextAndPrevLinks from './NextAndPrevLinks.vue'
-import {computed} from "vue";
+import {computed, ref, onMounted} from "vue";
+
+let windowObject = ref(null);
+
+onMounted(() => {
+  windowObject.value = window;
+})
 
 const screenHeight = computed(() => {
-  const screenHeight = window.innerHeight - 268;
+  let screenHeight = 500;
+  if (windowObject.value) {
+    screenHeight = windowObject.innerHeight - 268;
+  }
+
   return `${screenHeight}px`;
 })
 </script>
