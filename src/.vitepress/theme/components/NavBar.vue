@@ -7,6 +7,9 @@ import {useRepo} from "vitepress/dist/client/theme-default/composables/repo";
 defineEmits(['toggle'])
 
 const repo = useRepo();
+
+const twitterLink = 'https://twitter.com/emeraude_dev';
+
 </script>
 
 <template>
@@ -22,8 +25,14 @@ const repo = useRepo();
     <slot name="search" />
 
     <div v-if="repo" class="item repo-item">
-      <a :title="repo.text" :href="repo.link" target="_blank">
-        <img :src="withBase('/_assets/images/github-icon.svg')" :alt="repo.text"/>
+      <a title="Twitter" :href="twitterLink" target="_blank">
+        <img :src="withBase('/_assets/images/twitter-icon.svg')" alt="Twitter"/>
+      </a>
+    </div>
+
+    <div v-if="repo" class="item repo-item">
+      <a title="GitHub" :href="repo.link" target="_blank">
+        <img :src="withBase('/_assets/images/github-icon.svg')" alt="GitHub"/>
       </a>
     </div>
 

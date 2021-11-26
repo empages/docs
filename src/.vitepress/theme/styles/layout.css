@@ -123,6 +123,7 @@ ol,
 ul {
   margin: 1rem 0;
   line-height: 1.7;
+  font-size: 14px;
 }
 
 a,
@@ -135,6 +136,7 @@ select,
 summary,
 textarea {
   touch-action: manipulation;
+  font-size: 14px;
 }
 
 a {
@@ -144,6 +146,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: var(--c-brand-dark);
 }
 
 a.header-anchor {
@@ -158,6 +161,10 @@ a.header-anchor {
 a.header-anchor:hover,
 a.header-anchor:focus {
   text-decoration: none;
+}
+
+.link {
+  font-size: 14px;
 }
 
 figure {

@@ -16,6 +16,7 @@
     <div class="home-content">
       <PurposeHomeSection />
       <FeaturesHomeSection />
+      <FeedbackHomeSection />
       <SponsorsHomeSections />
     </div>
     <SupportHomeSection />
@@ -29,6 +30,7 @@ import FeaturesHomeSection from "./FeaturesHomeSection.vue";
 import PurposeHomeSection from "./PurposeHomeSection.vue";
 import SponsorsHomeSections from "./SponsorsHomeSections.vue";
 import SupportHomeSection from "./SupportHomeSection.vue";
+import FeedbackHomeSection from "./FeedbackHomeSection.vue";
 
 const { theme } = useData()
 const repo = useRepo()

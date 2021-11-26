@@ -1,6 +1,6 @@
 <script setup>
-import EditLink from 'vitepress/dist/client/theme-default/components/EditLink.vue'
 import LastUpdated from 'vitepress/dist/client/theme-default/components/LastUpdated.vue'
+import EditLink from "./EditLink.vue";
 </script>
 
 <template>
@@ -19,6 +19,14 @@ import LastUpdated from 'vitepress/dist/client/theme-default/components/LastUpda
   padding-top: 1rem;
   padding-bottom: 1rem;
   overflow: auto;
+}
+
+.page-footer :deep .link {
+  font-size: 14px !important;
+}
+
+.page-footer :deep .last-updated {
+  font-size: 14px !important;
 }
 
 @media (min-width: 960px) {

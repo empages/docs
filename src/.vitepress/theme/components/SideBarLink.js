@@ -16,7 +16,7 @@ export const SideBarLink = (props) => {
         : null;
 
     let activeChildClass = '';
-    if (childItems && children.some(x => isActive(route, x.link))) {
+    if (childItems && children && children.some(x => isActive(route, x.link))) {
         activeChildClass = 'active';
     }
 

@@ -4,12 +4,12 @@ module.exports = {
     description: 'A lightweight ASP.NET-based framework for creating manageable web applications designed with clean architecture.',
     head: [
         ['link', { rel: 'icon', type: 'image/x-icon', href: '_assets/favicons/image-x-icon.ico' }],
-        ['link', { rel: 'icon', type: 'image/png', href: '_assets/image-png.png' }],
-        ['link', { rel: 'apple-touch-icon', href: '_assets/apple-touch-icon.png' }],
+        ['link', { rel: 'icon', type: 'image/png', href: '_assets/favicons/image-png.png' }],
+        ['link', { rel: 'apple-touch-icon', href: '_assets/favicons/apple-touch-icon.png' }],
     ],
     themeConfig: {
         logo: '/_assets/images/logo_text.svg',
-        repo: 'emeraudeframework/emeraude',
+        repo: 'emeraudeframework',
         editLinks: true,
         editLinkText: 'Edit this page on GitHub',
         lastUpdated: 'Last Updated',
@@ -39,8 +39,8 @@ module.exports = {
             '/code-samples/': getCodeSamplesSidebar()
         },
         algolia: {
-            apiKey: '7075116e291a4c0c3d90606c113e30c6',
-            indexName: 'TX76LF8HST'
+            apiKey: '48a34e59ee28b22d3ff62ccfb8c64e43',
+            indexName: 'emeraude'
         }
     },
 }

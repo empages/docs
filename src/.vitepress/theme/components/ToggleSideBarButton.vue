@@ -1,11 +1,11 @@
-<script lang="ts">
-export default {
-  emits: ['toggle']
-}
+<script setup>
+
+const emit = defineEmits(['toggle'])
+
 </script>
 
 <template>
-  <div class="sidebar-button" @click="$emit('toggle')">
+  <div class="sidebar-button" @click="emit('toggle')">
     <svg
       class="icon"
       xmlns="http://www.w3.org/2000/svg"

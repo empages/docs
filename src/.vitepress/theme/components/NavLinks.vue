@@ -39,4 +39,10 @@ const show = computed(() => theme.value.nav || repo.value || localeLinks.value)
     border-bottom: 0;
   }
 }
+
+@media screen and (max-width: 720px) {
+  .nav-links {
+    padding-left: 15px;
+  }
+}
 </style>

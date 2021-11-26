@@ -39,6 +39,16 @@
     margin-left: 16rem;
 }
 
+@media screen and (max-width: 720px) {
+    .with-sidebar {
+        margin-left: unset;
+    }
+}
+
+.next-and-prev-link .link {
+    font-size: 14px !important;
+}
+
 .hp-header {
     margin-bottom: 30px;
 }

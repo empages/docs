@@ -66,4 +66,15 @@ const { props: linkProps, isExternal } = useNavLink(propsRefs.item)
     border-bottom-color: var(--c-brand);
   }
 }
+
+@media screen and (max-width: 720px) {
+  .item {
+    color: white;
+  }
+
+  .item.active {
+    color: var(--c-brand);
+    border-bottom-color: var(--c-brand);
+  }
+}
 </style>

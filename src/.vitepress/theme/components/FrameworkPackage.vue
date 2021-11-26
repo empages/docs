@@ -3,41 +3,35 @@
     <div class="card-body">
       <div class="package-item">
         <div class="package-img mt-1 mb-auto">
-          <img :src="logo" :alt="package.name"/>
+          <img :src="logo" :alt="props.package.name"/>
         </div>
         <div class="package-meta mt-0 mb-auto">
           <h3>
-            <a target="_blank" :title="package.name" :href="`https://www.nuget.org/packages/${package.name}`">
-              {{ package.name }}
+            <a class="package-title" target="_blank" :title="props.package.name" :href="`https://www.nuget.org/packages/${props.package.name}`">
+              {{ props.package.name }}
             </a>
           </h3>
-          <p>{{ package.description }}</p>
-          <p v-if="package.possibleReferences.length">Referenced by: <span class="badge bg-dark p-1 me-1" v-for="reference in package.possibleReferences" :key="`${package.name}-${reference}`">{{ reference }}</span></p>
+          <p>{{ props.package.description }}</p>
+          <p v-if="props.package.possibleReferences.length">Referenced by: <span class="badge bg-dark p-1 me-1" v-for="reference in props.package.possibleReferences" :key="`${props.package.name}-${reference}`">{{ reference }}</span></p>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
 import {withBase} from 'vitepress';
-export default {
-  name: "FrameworkPackage",
-  props: {
-    package: {
-      type: Object,
-      required: true
-    }
-  },
-  computed: {
-    logo() {
-      return withBase('/_assets/images/logo.svg')
-    }
-  },
-  methods: {
-    withBase
+import {ref} from "vue";
+
+const props = defineProps({
+  package: {
+    type: Object,
+    required: true
   }
-}
+})
+
+const logo = withBase('/_assets/images/logo.svg');
+
 </script>
 
 <style scoped>
@@ -58,13 +52,14 @@ export default {
     font-weight: bold;
   }
 
-  .package-meta h3 a {
+  .package-meta .package-title {
     color: black;
+    font-size: 20px;
   }
 
-  .package-meta h3 a:hover,
-  .package-meta h3 a:active,
-  .package-meta h3 a:focus {
+  .package-meta .package-title:hover,
+  .package-meta .package-title:active,
+  .package-meta .package-title:focus {
     color: var(--c-brand);
   }
 
