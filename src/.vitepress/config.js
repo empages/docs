@@ -133,6 +133,7 @@ function getCodeSamplesSidebar() {
             text: 'Deployment',
             children: [
                 { text: 'NGINX Configuration', link: '/code-samples/deployment/nginx-config' },
+                { text: 'Linux System Service', link: '/code-samples/deployment/linux-system-service' },
             ]
         }
     ]
