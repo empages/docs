@@ -8,7 +8,7 @@
       <div class="sponsors-list">
         <div class="sponsors-list-item">
           <a :key="'sponsor-index-' + sponsorIndex"
-             class="feature-list-item"
+             class="feature-list-item m-3 d-inline-block"
              :title="sponsor.name"
              target="_blank"
              :href="sponsor.url"
@@ -33,5 +33,11 @@ import { sponsors } from "../../data/sponsors";
 
 #sponsors .sponsors-list {
   text-align: center;
+}
+
+#sponsors .sponsors-list-item img {
+  min-height: 46px;
+  max-height: 102px;
+  width: auto;
 }
 </style>
