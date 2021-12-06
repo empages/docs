@@ -68,11 +68,6 @@ export const packages = [
         possibleReferences: [applicationProjects.presentation, applicationProjects.infrastructure, applicationProjects.application, applicationProjects.admin, applicationProjects.clientBuilder]
     },
     {
-        name: 'Emeraude.Application.General',
-        description: 'Emeraude.Application.General',
-        possibleReferences: [applicationProjects.presentation, applicationProjects.infrastructure, applicationProjects.application, applicationProjects.admin, applicationProjects.clientBuilder]
-    },
-    {
         name: 'Emeraude.Application.Identity',
         description: 'Emeraude.Application.Identity',
         possibleReferences: [applicationProjects.presentation, applicationProjects.infrastructure, applicationProjects.application, applicationProjects.admin, applicationProjects.clientBuilder]
@@ -111,6 +106,11 @@ export const packages = [
         name: 'Emeraude.Presentation.PortalGateway',
         description: 'Emeraude.Presentation.PortalGateway',
         possibleReferences: [applicationProjects.admin, applicationProjects.clientBuilder]
+    },
+    {
+        name: 'Emeraude.Defaults',
+        description: 'Package that contains default customizable implementations of the framework API.',
+        possibleReferences: [...applicationProjectsArray]
     },
     {
         name: 'Emeraude.Cli',

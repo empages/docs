@@ -20,6 +20,12 @@
       <SponsorsHomeSections />
     </div>
     <SupportHomeSection />
+    <ContactHomeSection />
+    <div class="bg-attribute p-3 text-center">
+      <a href="https://www.netlify.com">
+        <img src="/_assets/images/netlify-color-accent.svg" alt="Deploys by Netlify" />
+      </a>
+    </div>
   </div>
 </template>
 
@@ -31,6 +37,7 @@ import PurposeHomeSection from "./PurposeHomeSection.vue";
 import SponsorsHomeSections from "./SponsorsHomeSections.vue";
 import SupportHomeSection from "./SupportHomeSection.vue";
 import FeedbackHomeSection from "./FeedbackHomeSection.vue";
+import ContactHomeSection from "./ContactHomeSection.vue";
 
 const { theme } = useData()
 const repo = useRepo()
@@ -95,5 +102,9 @@ const repo = useRepo()
   background-repeat: no-repeat;
   bottom: -50px;
   right: -40px;
+}
+
+.bg-attribute {
+  background: #313d3e;
 }
 </style>

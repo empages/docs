@@ -67,16 +67,6 @@ The whole mapping in the framework is implemented by using the [AutoMapper](http
 In order to boost your development work the Emeraude Framework provides a built-in application layer separated on a few parts
 based on their contexts:
 
-## General
-::: info ASSEMBLY
-**Emeraude.Application.General**
-:::
-
-Provides built-in requests for uploading a file with integrated validation:
-- **UploadFileCommand**
-- **UploadImageCommand**
-
-
 ## Identity
 ::: info ASSEMBLY
 **Emeraude.Application.Identity**
