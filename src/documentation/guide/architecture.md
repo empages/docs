@@ -23,6 +23,11 @@ Both flows define our application so as a result, we are having an application t
 infrastructure, and presentation in addition to provided framework's infrastructure, application, and presentation. 
 The linking points that are responsible for the proper work and customization are the contracts and configurations.
 
+::: tip
+Consider that **Clean Architecture** is recommended but not required. Dependency flow can be parallel in order to fit
+the needs of the classic N-tier architectures. 
+:::
+
 ## Framework
 The framework itself is designed on top of N-tier architecture with the following structure:
 

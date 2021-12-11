@@ -10,15 +10,18 @@ The target goal of proper runtime injection is the existence of two files in the
 - **runtime-injection.style.min.css** @ ./privateroot/portal
 
 #### Packages
-Loading standard packages for execution gulp building of SCSS files + webpack to bundle a Vue app.
+Loading standard packages for execution gulp building of SCSS files + vite to bundling a Vue app.
 
 ```json
 {
   "scripts": {
     "styles": "gulp default",
-    "portal": "webpack --config webpack.portal.config.js"
+    "portal": "vite build --config portal.config.js"
   },
   "devDependencies": {
+    "@emeraude-framework/portal-runtime-injection": "^0.1.5",
+    "@vue/compiler-sfc": "^3.2.21",
+    "@vitejs/plugin-vue": "^1.10.2",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
@@ -28,63 +31,81 @@ Loading standard packages for execution gulp building of SCSS files + webpack to
     "node-sass": "^6.0.1",
     "sass": "^1.37.5",
     "vue": "^3.2.20",
-    "webpack": "^5.61.0",
-    "webpack-cli": "^4.9.1",
-    "@emeraude-framework/portal-runtime-injection": "^0.1.5",
-    "@vue/compiler-sfc": "^3.2.21",
-    "vue-loader": "^16.8.2"
+    "vue-loader": "^16.8.2",
+    "vite": "^2.7.1",
+    "rollup-plugin-vue": "^6.0.0"
   }
 }
 ```
 
 #### Bundle injection initialization
-Actual Vue initializer of runtime injector.
+Vue injector main initialization file:
 
 ```js
 // App/Portal/src/main.js
 import { initializeRuntimeInjection } from "@emeraude-framework/portal-runtime-injection"
-import mixins from "./plugins/mixins";
-import components from './plugins/components'
+import createInsightsCustomViewComponent from "./components/insights-custom-view-component";
 
-export default initializeRuntimeInjection((app) => {
-    app.use(mixins);
-    app.use(components);
-});
+initializeRuntimeInjection((app, vueBundler) => {
+    app.component('InsightsCustomView', createInsightsCustomViewComponent(vueBundler));
+})
+
+// App/Portal/src/components/insights-custom-view-component.js
+export default function ({compile}) {
+    const render = compile(`
+<div>
+    <div class="alert alert-warning">{{ message }}</div>
+</div>
+`);
+
+    return {
+        render,
+        data() {
+            return {
+                message: 'ToDo: to create a custom view for the insights..'
+            }
+        },
+        props: {
+
+        },
+        inject: ['$httpClient'], // injects the Portal HTTP client that has all base setup configured
+        mounted() {
+        }
+    }
+}
 ```
 
-#### Webpack config
+#### Vite config
 Bundle configuration that takes the Vue initializer and makes the bundle that we are going to inject into the portal.
 
 ```js
-// App/webpack.portal.config.js
-const path = require('path');
-const { VueLoaderPlugin } = require('vue-loader');
-const { RUNTIME_INJECTION_BUNDLE_FILE_NAME } = require('@emeraude-framework/portal-runtime-injection');
+// App/portal.config.js
+import vue from 'rollup-plugin-vue'
+import {RUNTIME_INJECTION_BUNDLE_FILE_NAME} from '@emeraude-framework/portal-runtime-injection'
+import path from 'path'
+import { defineConfig } from 'vite'
 
-module.exports = {
-    entry: './Portal/src/main.js',
-    output: {
-        filename: RUNTIME_INJECTION_BUNDLE_FILE_NAME,
-        path: path.resolve(__dirname, 'privateroot/portal'),
-    },
-    mode: 'production',
-    resolve: {
-        alias: {
-            vue: "@vue/runtime-dom"
-        }
-    },
-    module: {
-        rules: [
-            {
-                test: /\.vue$/,
-                use: "vue-loader"
+module.exports = defineConfig({
+    plugins: [vue()],
+    build: {
+        outDir: path.resolve(__dirname, 'privateroot/portal'),
+        emptyOutDir: false,
+        lib: {
+            entry: path.resolve(__dirname, 'Portal/src/main.js'),
+            formats: ['iife'],
+            name: RUNTIME_INJECTION_BUNDLE_FILE_NAME,
+            fileName: () => RUNTIME_INJECTION_BUNDLE_FILE_NAME
+        },
+        rollupOptions: {
+            external: ['vue'],
+            output: {
+                globals: {
+                    vue: 'Vue'
+                }
             }
-        ]
-    },
-    plugins: [
-        new VueLoaderPlugin(),
-    ],
-};
+        }
+    }
+})
 ```
 
 #### Gulp config
