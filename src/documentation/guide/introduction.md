@@ -5,14 +5,73 @@ title: Introduction | Documentation
 ---
 # Introduction
 
-What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Before deep-diving into the tech stuff let's provide you a little of context of all. **Emeraude** 
+(which comes from Middle English, nowadays more popular as emerald) is one of the most popular 
+gemstones. It symbolizes love, beauty, **growth**, creativity, focus, and intensity.
 
-Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+Our main intention and desire are to provide you the reality that your product represents the same as the 
+emerald and many more. We want to rise your application to a new level in a simple manner, exactly like 
+jewels make the difference with the people - just a single and minor piece but at the same time - a huge 
+difference.
 
-What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+## What is Emeraude?
 
-Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+Emeraude is a web application framework based on ASP.NET which is delivered in the form of NuGet packages 
+that anyone can import into the project that working on. The framework can be considered as separated and 
+relatively independent because its main goal is to provide additional features by minor impact over the 
+application.
+For a more clear view of the framework let's describe what Emeraude is/does and what Emeraude is/does not:
+
+- Emeraude is based on ASP.NET
+- Emeraude is written on .NET 6 and C# 10
+- Emeraude is a framework - not a library
+- Emeraude is a wrapper for an ASP.NET-based web application
+- Emeraude can be used for all type web projects - MVC, Web API, RazorPages, Blazor, etc.
+- Emeraude provides abstractions, services and utilities out of the box
+- Emeraude is configurable
+- Emeraude is free and open-source
+- Emeraude does not require any licenses and keys to work
+- Emeraude does not have any requirements for your application code
+- Emeraude does not wrap any UI-related elements (HTML, CSS, JS) into its NuGet packages
+- Emeraude is not a CMS, CRM, etc.
+- Emeraude is not SaaS, PaaS, etc.
+
+## Features
+
+Emeraude Framework is following the principle 'Less is More' so the list of the features is significantly small:
+
+#### EmPages
+
+#### Runtime Generation
+
+#### Authentication
+
+#### Localization
+
+#### System Files Management
+
+#### SEO
+
+#### Utilities
+
+## Emeraude Portal
+
+## Business Applications
+
+The proper usage of the Emeraude is very important for the stability of your application and respectively product. 
+The framework is designed to provide management capabilities and supporting abstractions, services, and utilities 
+for your application.
+
+Consider the fact Emeraude Portal is made to support you, your team members, and the stakeholders  - not the users of 
+the application.
+
+The usage of the Emeraude is not limited to a specific domain. A few possible examples are:
+
+- Website
+- Web application
+- Web API
+- CMS, CRM, ERP
+- Mobile/desktop application data/users manager
+- Microservices data manager
+- Unified third-parties manager
+- Source code analysis platform

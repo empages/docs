@@ -42,7 +42,6 @@ a set of few modules:
 ### Application
 That layer reference the infrastructure and then exposes a configurable, simplified and validated API references implemented
 via CQRS requests:
-- **General** - exposes operations like file upload
 - **Identity** - exposes operations like user login
 - **Consumer** - exposes operations like sitemap builder
 - **Client Builder** - exposes generation operations
