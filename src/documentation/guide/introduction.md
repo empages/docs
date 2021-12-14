@@ -44,6 +44,11 @@ Emeraude Framework is following the principle 'Less is More' so the list of the 
 
 #### Runtime Generation
 
+In order to provide maximum productivity to the developers Emeraude has built-in tool called **Client Builder**.
+The tool is constructed by 2 main elements - back-end element represented by Scaffold Modules and front-end element
+represented by the Emeraude Portal. More for the runtime generation you can read in the
+[Client Builder Section](/documentation/client-builder/runtime-generation.html).
+
 #### Authentication
 
 #### Localization

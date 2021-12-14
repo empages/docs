@@ -85,9 +85,9 @@ function getDocumentationSidebar() {
         {
             text: 'Client Builder',
             children: [
-                { text: 'Portal', link: '/documentation/client-builder/portal' },
                 { text: 'Runtime Generation', link: '/documentation/client-builder/runtime-generation' },
                 { text: 'Scaffold Modules', link: '/documentation/client-builder/scaffold-modules' },
+                { text: 'Portal', link: '/documentation/client-builder/portal' }
             ]
         }
     ]
@@ -102,7 +102,6 @@ function getCodeSamplesSidebar() {
                 { text: 'Requests', link: '/code-samples/general/requests' },
                 { text: 'Mapping', link: '/code-samples/general/mapping' },
                 { text: 'Database Initializer', link: '/code-samples/general/database-initializer' },
-                { text: 'Database Migration', link: '/code-samples/general/database-migration' }
             ]
         },
         {
