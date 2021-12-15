@@ -47,8 +47,63 @@ a way to customize them in a very simple way.
 
 ## Configure Emeraude
 
+The main configuration of the framework is part of the **ConfigureEmeraude** extension method. As a parameter of that
+method you have to provide an **Action\<EmOptionsSetup>** that provides the configuration capabilities of the framework.
+
+### MainOptions
+
+// ToDo
+
+### ApplicationsOptions
+
+// ToDo
+
+### PresentationOptions
+
+// ToDo
+
+### AdminOptions
+
+// ToDo
+
+### ConsumerOptions
+
+// ToDo
+
+### PersistenceOptions
+
+// ToDo
+
+### IdentityOptions
+
+// ToDo
+
+### LocalizationOptions
+
+// ToDo
+
+### FilesOptions
+
+// ToDo
+
+### ClientBuilderOptions
+
+// ToDo
+
+### PortalGatewayOptions
+
+// ToDo
+
 ### Post Configuration 
+
+// ToDo
 
 ## Configure builder
 
+Web Application Builder configuration is the main setup of the ASP.NET infrastructure. All resources and services have
+to be registered there. There is no specific requirements for the builder configuration because all required services
+and resources are registered by the **ConfigureEmeraude** extension method.
+
 ## Configure application
+
+// ToDo

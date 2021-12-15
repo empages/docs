@@ -39,7 +39,11 @@ If you are going to use the identity infrastructure separately you must register
 
 ### Services
 
+// ToDo
+
 ### External Providers
+
+// ToDo
 
 ### Identity Event Handlers
 
@@ -76,30 +80,60 @@ In order to trigger manually the identity events you can use the service **IIden
 
 ### Options
 
+// ToDo
+
 ## Persistence
+
+// ToDo
 
 ### Context
 
+// ToDo
+
 ### Seed
+
+// ToDo
 
 ### Common
 
+// ToDo
+
 ### Options
+
+// ToDo
 
 ## Localization
 
+// ToDo
+
 ### Persistence
+
+// ToDo
 
 ### Services
 
+// ToDo
+
 ### Options
+
+// ToDo
 
 ## File Storage
 
+// ToDo
+
 ### Roots
+
+// ToDo
 
 ### Services
 
+// ToDo
+
 ### Validation
 
+// ToDo
+
 ### Options
+
+// ToDo

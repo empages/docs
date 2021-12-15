@@ -42,6 +42,8 @@ Emeraude Framework is following the principle 'Less is More' so the list of the 
 
 #### EmPages
 
+// ToDo
+
 #### Runtime Generation
 
 In order to provide maximum productivity to the developers Emeraude has built-in tool called **Client Builder**.
@@ -51,15 +53,27 @@ represented by the Emeraude Portal. More for the runtime generation you can read
 
 #### Authentication
 
+// ToDo
+
 #### Localization
+
+// ToDo
 
 #### System Files Management
 
+// ToDo
+
 #### SEO
+
+// ToDo
 
 #### Utilities
 
+// ToDo
+
 ## Emeraude Portal
+
+// ToDo
 
 ## Business Applications
 
