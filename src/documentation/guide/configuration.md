@@ -92,7 +92,8 @@ method you have to provide an **Action\<EmOptionsSetup>** that provides the conf
 
 ### PortalGatewayOptions
 
-// ToDo
+Configuration of the Portal Gateway is important part for the proper intercommunication with Emeraude Portal. For more
+details please check the [portal accessibility section](/documentation/portal/accessibility).
 
 ### Post Configuration 
 
