@@ -43,6 +43,13 @@ builder
 Please consider that the collection **PortalUrls** already has the *https://emeraude.io* in there
 :::
 
+Parallel to the builder configuration - in order everything with the Portal Gateway is configured well - you have to
+enable the CORS in the application builder section:
+
+```csharp
+app.UseCors();
+```
+
 ## Runtime Injection
 
 In order to provide full capabilities for customization - Emeraude Portal exposes a way to be customized with predefined
