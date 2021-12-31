@@ -52,43 +52,63 @@ method you have to provide an **Action\<EmOptionsSetup>** that provides the conf
 
 ### MainOptions
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### ApplicationsOptions
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### PresentationOptions
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### AdminOptions
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### ConsumerOptions
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### PersistenceOptions
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### IdentityOptions
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### LocalizationOptions
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### FilesOptions
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### ClientBuilderOptions
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### PortalGatewayOptions
 
@@ -97,7 +117,9 @@ details please check the [portal accessibility section](/documentation/portal/ac
 
 ### Post Configuration 
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ## Configure builder
 
@@ -107,4 +129,6 @@ and resources are registered by the **ConfigureEmeraude** extension method.
 
 ## Configure application
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::

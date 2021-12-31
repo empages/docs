@@ -11,7 +11,6 @@
               {{ props.package.name }}
             </a>
           </h3>
-          <p>{{ props.package.description }}</p>
           <p v-if="props.package.possibleReferences.length">Referenced by: <span class="badge bg-dark p-1 me-1" v-for="reference in props.package.possibleReferences" :key="`${props.package.name}-${reference}`">{{ reference }}</span></p>
         </div>
       </div>

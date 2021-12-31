@@ -42,7 +42,9 @@ Emeraude Framework is following the principle 'Less is More' so the list of the 
 
 #### EmPages
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 #### Runtime Generation
 
@@ -53,27 +55,39 @@ represented by the Emeraude Portal. More for the runtime generation you can read
 
 #### Authentication
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 #### Localization
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 #### System Files Management
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 #### SEO
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 #### Utilities
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ## Emeraude Portal
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ## Business Applications
 

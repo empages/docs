@@ -39,11 +39,15 @@ If you are going to use the identity infrastructure separately you must register
 
 ### Services
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### External Providers
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### Identity Event Handlers
 
@@ -80,60 +84,90 @@ In order to trigger manually the identity events you can use the service **IIden
 
 ### Options
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ## Persistence
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### Context
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### Seed
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### Common
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### Options
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ## Localization
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### Persistence
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### Services
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### Options
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ## File Storage
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### Roots
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### Services
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### Validation
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
 
 ### Options
 
-// ToDo
+::: tip COMING SOON
+We are actively working on this section! It will be available as soon as possible!
+:::
