@@ -39,15 +39,55 @@ If you are going to use the identity infrastructure separately you must register
 
 ### Services
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+- **ICurrentUser** - current user ID accessor
+- **ICurrentUserProvider** - accessor that provides the identity user for the current request
+- **IRoleManager** - role manager service
+- **ITwoFactorAuthenticationService** - two-factor authentication service that provides specific methods for managing that functionality into the system
+- **IUserAvatarService** - service specified for user avatar processing
+- **IUserClaimsService** - service for accessing and mutation of user claims
+- **IUserManager** - wrapper of ASP.NET Core User Manager with additional functionalities
+- **IUserTokensService** - service that provides methods for generation of access and refresh tokens
 
 ### External Providers
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+In case you need to use external provider as authentication provider you can take the advantages of Emeraude infrastructure.
+**IExternalProviderAuthenticator** is a contract that is designed to extend your application authentication.
+
+The steps are quite easy:
+- Implement **IExternalProviderAuthenticator** and all required methods
+```csharp
+public class MyCustomAuthenticator : IExternalProviderAuthenticator
+{
+    public string ClientId { get; set; }
+
+    public string ClientSecret { get; set; }
+
+    public string Name => "MyCustomAuthProvider";
+
+    public async Task<IExternalUser> GetExternalUserAsync(ClaimsPrincipal principal)
+    {
+        // extraction of external user by using the ClaimsPrincipal principal
+    }
+
+    public async Task<IExternalUser> GetExternalUserAsync(string provider, string accessToken)
+    {
+        // extraction of external user by using the auth provider and its access token
+    }
+
+    public void RegisterAuthenticator(AuthenticationBuilder builder)
+    {
+        // your authenticator registration
+    }
+} 
+```
+- Register the new external provider in the **IdentityOptions** of the startup setup via ``ExternalProvidersAuthenticators`` property
+```cshapr
+setup.IdentityOptions.ExternalProvidersAuthenticators.Add(new MyCustomAuthenticator
+{
+    ClientId = "my-custom-auth-provider-client-id",
+    ClientSecret = "my-custom-auth-provider-client-secret",
+});
+```
 
 ### Identity Event Handlers
 
@@ -84,9 +124,11 @@ In order to trigger manually the identity events you can use the service **IIden
 
 ### Options
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+- **AdditionalRoles** - dictionary that contains all additional roles and their claims
+- **SourceIdentityOptions** - internal options for identity management of ASP.NET
+- **AccessTokenOptions** - access token options for the API authentication
+- **RefreshTokenOptions** - refresh token options for configure the access token refreshing
+- **ExternalProvidersAuthenticators** - collection of all external provider authenticators implementations used in the framework
 
 ## Persistence
 

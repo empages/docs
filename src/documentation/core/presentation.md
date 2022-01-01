@@ -32,6 +32,29 @@ For detailed information what is available from the assembly you can check the s
 
 ## Platform Base
 The classes and interfaces of platform base are part of the **Emeraude.Presentation.PlatformBase** assembly.
+The core idea behind platform base is followed by the idea to develop a platform solution with Emeraude Framework.
+In order to take the advantages of all platform features you can use:
+
+- Controllers:
+  - **UserAuthenticationController** - provides MVC-based authentication actions 
+  - **SitemapController** - provides endpoint that consume **ISitemapComposition** in order to provide sitemap endpoint
+  - **ExecutionResultController** - provides a feature for showing generic result page
+
+- TagHelpers:
+  - **TranslationTagHelper** - provides a simple tag helper ``<t>INNER_CONTENT</t>`` where **INNER_CONTENT** is a translation 
+key that will be translated based on the current language and the registered translations in the Localization database
+  - **StaticContentTagHelper** - provides a simple tag helper ``<sc>INNER_CONTENT</sc>``where **INNER_CONTENT** is a static 
+content key that will be extracted from the Localization database based on the current language
+
+- Attributes:
+  - **LanguageRouteAttribute** - provides same behavior like Microsoft.AspNetCore.Mvc.Routing.RouteAttribute but includes 
+the constraint for language codes so in case you use the [LanguageRoute("/about")] that is same like to use
+[Route("/{languageCode:lang}/about")]
+
+::: tip
+In case you want to have SEO friendly localized URLs you have to have in your action both attributes **RouteAttribute**
+and **LanguageRouteAttribute**.
+:::
 
 For detailed information what is available from the assembly you can check the source directly on
 [GitHub](https://github.com/emeraudeframework/emeraude/tree/master/src/Emeraude.Presentation.PlatformBase).
