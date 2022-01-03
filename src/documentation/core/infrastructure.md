@@ -132,33 +132,60 @@ In order to trigger manually the identity events you can use the service **IIden
 
 ## Persistence
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+Persistence instance of the infrastructure is representing the database work of the framework. By following the concept
+of Clean Architecture, Emeraude Framework is considering the database as a detail so that's why the persistence is 
+considered as an important part of the framework but not the core one. That means you can use the framework with 
+minimal database impact.
 
 ### Context
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+Context is the implementation wrapper of the database. It follows the Entity Framework, so it is not different from the
+standard implementation of DbContext. Emeraude provides few ready to use contracts and abstract implementations which
+can be used in order to take the benefits from the framework:
+
+- **IDatabaseContext** - contract for base access of the registered DbContext
+- **IEmContext** - extended contract of IDatabaseContext which takes the entities from the identity infrastructure
+- **EmContext** - implementation of the IEmContext which is considered as an IdentityContext that implements the IEmContext as well
 
 ### Seed
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+In order to boost the productivity during development sometimes developers and the application needs data population 
+at the beginning. For that purpose Emeraude exposes an interface that defines a module that must be considered as
+database service that will be triggered at the beginning of the execution - **IDatabaseInitializer**.
+The purpose of that database initializer is if you need to define startup data for your application - to create/build it.
+A proper example for database initializer can be found in the sample section [here](/code-samples/general/database-initializer).
 
 ### Common
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+Work with the data can be considered as unique but some fields sometimes are standard because of their nature. 
+Emeraude provides a constants lengths that can be used for database columns lengths in order to optimize the usage of 
+database. To use them you can use the following static class - **DefaultDataTypesLengths**:
+
+- SingleName - 30 symbols
+- FullName - 100 symbols
+- Email - 256 symbols
+- Phone - 20 symbols
+- Fax - 20 symbols
+- Country - 30 symbols
+- City - 30 symbols
+- Address - 160 symbols
+- CompanyName - 50 symbols
+- ReferenceNumber - 40 symbols
+- Website - 300 symbols
+- GroupName - 80 symbols
+- AddressNumber - 10 symbols
 
 ### Options
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+In order to configure the persistence behavior you have to use the Persistence Options of the startup setup of the framework:
+
+- **ContextProvider** - an enumeration that specify predefined ContextOptionsBuilder based on its value (InMemoryDatabase, MicrosoftSqlServer, PostgreSql)
+- **ContextOptionsBuilder** - specify configuration builder for Entity Framework in order to specify database provider
+- **ConnectionString** - specify the connection string for the database provider (use **SetContext** in order to use the type validation)
+- **ContextInterfaceType** - specify the service interface of the database context (use **SetContext** in order to use the type validation)
+- **ContextImplementationType** - specify the service implementation of the database context
+- **ContextRegistrationAction** - context registration action used for proper registration of the database context (ignore it if you use **SetContext** of the options)
+- **DatabaseInitializers** - list of the database initializers that will be triggered on the application startup (use **AddDatabaseInitializer** in order to use the type validation)
 
 ## Localization
 

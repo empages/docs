@@ -82,9 +82,9 @@ We are actively working on this section! It will be available as soon as possibl
 
 ### PersistenceOptions
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+Configuration of the persistence is required in order to setup properly the database that will be used by the framework
+(at least for the identity). Please check the [Persistence Section](/documentation/core/infrastructure.html#persistence-1)
+for more details.
 
 ### IdentityOptions
 
@@ -117,8 +117,11 @@ details please check the [portal accessibility section](/documentation/portal/ac
 
 ### Post Configuration 
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
+Post configuration is a simple extension method of the main configuration that provides access to the all 
+builders references that the framework use during the setup execution.
+
+::: warning IMPORTANT
+Action provided to the EmeraudePostConfigure will always be invoked after the completion of Emeraude Setup!
 :::
 
 ## Configure builder
@@ -129,6 +132,33 @@ and resources are registered by the **ConfigureEmeraude** extension method.
 
 ## Configure application
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+Web Application configuration is main setup of the ASP.NET infrastructure. All middlewares comes there, so it is from
+key importance for you not to miss that. A simple application configuration might look like this:
+
+```csharp
+app =>
+{
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseDeveloperExceptionPage();
+        app.UseMigrationsEndPoint();
+    }
+    else
+    {
+        app.UseExceptionHandler("/error/400");
+        app.UseHsts();
+    }
+
+    app.UseStatusCodePagesWithReExecute("/error/{0}");
+
+    app.UseHttpsRedirection();
+
+    app.UseRouting();
+
+    app.UseCors();
+
+    app.UseAuthentication();
+
+    app.UseAuthorization();
+}
+```
