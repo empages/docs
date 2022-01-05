@@ -89,6 +89,10 @@ setup.IdentityOptions.ExternalProvidersAuthenticators.Add(new MyCustomAuthentica
 });
 ```
 
+::: tip DEFAULTS
+Please consider that **Emeraude.Defaults** already contains predefined external providers for authentication with Facebook and/or Google.
+:::
+
 ### Identity Event Handlers
 
 In case you have decided to use the already built-in identity features of Emeraude you probably will need to
@@ -161,19 +165,19 @@ Work with the data can be considered as unique but some fields sometimes are sta
 Emeraude provides a constants lengths that can be used for database columns lengths in order to optimize the usage of 
 database. To use them you can use the following static class - **DefaultDataTypesLengths**:
 
-- SingleName - 30 symbols
-- FullName - 100 symbols
-- Email - 256 symbols
-- Phone - 20 symbols
-- Fax - 20 symbols
-- Country - 30 symbols
-- City - 30 symbols
-- Address - 160 symbols
-- CompanyName - 50 symbols
-- ReferenceNumber - 40 symbols
-- Website - 300 symbols
-- GroupName - 80 symbols
-- AddressNumber - 10 symbols
+- **SingleName** - 30 symbols
+- **FullName** - 100 symbols
+- **Email** - 256 symbols
+- **Phone** - 20 symbols
+- **Fax** - 20 symbols
+- **Country** - 30 symbols
+- **City** - 30 symbols
+- **Address** - 160 symbols
+- **CompanyName** - 50 symbols
+- **ReferenceNumber** - 40 symbols
+- **Website** - 300 symbols
+- **GroupName** - 80 symbols
+- **AddressNumber** - 10 symbols
 
 ### Options
 

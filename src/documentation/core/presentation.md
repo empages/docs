@@ -20,7 +20,7 @@ The core purpose of the Presentation Abstractions is to support your development
 In case you need to support the development of the controllers you can use the following abstraction classes:
 - **EmController** - base Emeraude controller that provides all required services and base functionalities
 - **EmApiController** base controller (inheritor of the **EmController**) for creating API controllers
-- **PublicController** - base controller (inheritor of the **EmController**) for creating classic MVC controllers
+- **EmPublicController** - base controller (inheritor of the **EmController**) for creating classic MVC controllers
 
 ::: info INFO
 Please consider that the **Emeraude.Presentation** assembly is mainly a supporter and do not expose many features. In
