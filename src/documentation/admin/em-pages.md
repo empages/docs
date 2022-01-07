@@ -48,3 +48,9 @@ exists outside the EmPage. The framework is designed to provide flexible and eas
 In order to allow developers the possibility to take data from any data source (database, file storage, external service, 
 third-party provider, etc.) the implementation of data is always followed by **Data Strategy**. The data strategy is the 
 way how the data is fetched so the EmPages can be considered as a limitless from a data perspective.
+
+<hr/>
+
+::: tip RECOMMENDATION
+In case you want to create a EmPage we recommend you to use the Emeraude CLI - ``emeraude em-page -n MyEntity``.
+:::

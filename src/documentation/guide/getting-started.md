@@ -73,7 +73,7 @@ dotnet tool install --global dotnet-ef
 To start with **Emeraude** you have a few options - to set up new project and create each project file by yourself,
 to clone some repository with ready to use project, or you can use **Emeraude CLI**. By execute the command
 ```
-em create -n MyProjectName
+emeraude create -n MyProjectName
 ```
 the CLI will create for you a new project by cloning the [Template](https://github.com/emeraudeframework/template) repository and
 rename all files and namespaces with the name of your project.

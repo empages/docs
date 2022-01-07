@@ -106,6 +106,4 @@ const pageClasses = computed(() => {
       </p>
     </div>
   </div>
-
-  <Debug />
 </template>

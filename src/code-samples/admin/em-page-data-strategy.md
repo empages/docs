@@ -26,7 +26,7 @@ configuration there related to the ordering expressions that will be available f
 
 #### Data strategy for work with external data of any type
 ```csharp
-public class FrequentlyAskedQuestionEmPageDataStrategy : IEmPageDataStrategy<FrequentlyAskedQuestionEmPageModel>
+public class FrequentlyAskedQuestionEmPageDataStrategy : IEmPageDataStrategy<FrequentlyAskedQuestionEmPageModel>, IEmPageCustomDataStrategy
 {
     public IEmPageRequest<FrequentlyAskedQuestionEmPageModel> BuildRawModelQuery(EmPageDataFilter filter)
     {

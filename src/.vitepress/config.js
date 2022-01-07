@@ -99,7 +99,6 @@ function getCodeSamplesSidebar() {
             text: 'General',
             children: [
                 { text: 'Application Setup', link: '/code-samples/general/application-setup' },
-                { text: 'Requests', link: '/code-samples/general/requests' },
                 { text: 'Mapping', link: '/code-samples/general/mapping' },
                 { text: 'Database Initializer', link: '/code-samples/general/database-initializer' },
             ]
