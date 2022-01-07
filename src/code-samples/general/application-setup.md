@@ -99,7 +99,7 @@ public class Program
 
                 app.UseHttpsRedirection();
 
-                app.UseStaticFiles(staticFilesOptions);
+                app.UseStaticFiles();
 
                 app.UseRouting();
 
