@@ -6,6 +6,10 @@ module.exports = {
         ['link', { rel: 'icon', type: 'image/x-icon', href: '_assets/favicons/image-x-icon.ico' }],
         ['link', { rel: 'icon', type: 'image/png', href: '_assets/favicons/image-png.png' }],
         ['link', { rel: 'apple-touch-icon', href: '_assets/favicons/apple-touch-icon.png' }],
+        ['meta', { property: 'og:type', content: 'website' }],
+        ['meta', { property: 'og:url', content: 'https://emeraude.dev/' }],
+        ['meta', { property: 'og:image', content: 'https://emeraude.dev/_assets/images/logo-bg.jpg' }],
+        ['meta', { property: 'og:image:alt', content: 'Emeraude Framework' }]
     ],
     themeConfig: {
         logo: '/_assets/images/logo_text.svg',
