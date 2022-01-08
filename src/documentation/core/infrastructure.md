@@ -193,54 +193,84 @@ In order to configure the persistence behavior you have to use the Persistence O
 
 ## Localization
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+In order to provide wide range of possibilities the framework provides integrated localization feature that provide
+ready to use solution for work with languages, translations and localized content. The feature itself is applicable 
+mainly to the customer side. The management of the content is delegated to the [Client Builder](/documentation/client-builder/portal) 
+that is a part of the Emeraude Portal.
 
 ### Persistence
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+In order to provide stable and easy for transportation localization storage the Emeraude Framework save any localization
+information in predefined SQLite database placed in the **privateroot** of the application. To work with the data placed
+in that database you can use the already defined Entity Framework context named **LocalizationContext**.
+
+The structure of the stored entities in the localization context is as follows:
+- **Language** - entities that represent the languages
+- **TranslationKey** - entities that represent the identification keys of translations
+- **TranslationValue** - entities that represent the translation values behind specified key
+- **ContentKey** - entities that represent the identification keys of static content
+- **StaticContent** - entities that represent the static content (same as translations but with manner of large text/HTML) behind specified key
 
 ### Services
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+In order to provide flexibility and control about the whole localization assets the framework exposes a few services that
+can be used to control and use the stored localization data:
+
+- **ILocalizationContext** - an interface that provides access to the implementation of the **LocalizationContext**
+- **ILanguageStore** - a service that wraps work with languages, translations and static content items
+- **ICurrentLanguageProvider** - an accessor for the currently selected language based on the current route
+- **ILanguagesResourceManager** - a helper service that converts the stored localized data into the **resx** resources
+- **IEmLocalizer** - a service that provides API for translating keys from translations and static content items
 
 ### Options
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
+::: warning NOT APPLICABLE
+For the current version of the Emeraude Framework there is no options for that infrastructure instance!
 :::
 
 ## File Storage
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+Nowadays, the work with files is mostly transferred to the cloud storages but still in some cases application needs
+interactions with local-based files. That's why the framework provides friendly SDK for work with local files in order 
+to provide simplicity and quickness to the development process.
 
 ### Roots
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
+In the context of file storage of application based on Emeraude Framework there is clear separation of the places where
+the files can be stored:
+
+- Public Root (**wwwroot**) - default static content files of ASP.NET applications
+- Privet Root (**privateroot**) - internal folder managed by the Emeraude Framework in order to store local files that are 
+not accessible by the outside world
+
+::: warning IMPORTANT
+Please consider that the files that are in the **privateroot** needs to be specified if they need to be used as embedded resources,
+content, etc.
 :::
 
 ### Services
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+In order to provide flexibility and control about local file system the framework exposes a few services that
+can be used as a management tools for all local files:
+
+- **IRootsService** - a service that provides API for works with the roots of the infrastructure
+- **ISystemFilesService** - a service that provides direct access to all local files and folders
+- **ITemporaryFilesService** - a service that store in the memory cache temporary files references in order to optimize the uploading process 
+- **IUploadService** - a service that uploads files into the local file system
 
 ### Validation
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+In order to provide built-in functionality for proper work with files the framework provides special service called
+**IFilesValidationProvider** that allows developers to validate files before their uploading. The built-in validation
+is using the chain of responsibility pattern where each chain is predefined validation. In order to figure out more about
+that validation process we suggest you to check out the 
+[source code](https://github.com/emeraudeframework/emeraude/tree/master/src/Emeraude.Infrastructure.FileStorage/Validation) 
+of the validators.
 
 ### Options
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+In order to configure behavior of the file system infrastructure you can use the following options:
+
+- **MaxAllowedFileSize** - get/set the maximum allowed size used by default by the file validator (_20971520 bytes (~20MB)_)
+- **MaxAllowedImageFileSize** - get/set the maximum allowed size used by default by the image validator (_10485760 bytes (~10MB)_)
+- **InitFolders** - a list of all folders that must be initialized on the application start

@@ -41,3 +41,15 @@ Each module implementation have to implement two core methods:
 ```
 
 A sample scaffold module can be found on [here](/code-samples/client-builder/module).
+
+### Options
+
+In order to configure which modules can be used and the behavior of the Client Builder as a feature you can use the 
+following options:
+
+- **EnableClientBuilder** - flag that enable/disable the client builder
+- **Assemblies** - list of all assemblies that will be used for assembly scanning
+- **ModulesTypes** - list of all modules types that will be applied into the scaffold module factory
+- **ConstantsTypes** - list of all types that contains constants
+- **Constants** - list of all manual entered constants
+- **ClientApplicationsPaths** - a dictionary for specifying the target directory for generation result based on client name

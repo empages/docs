@@ -59,7 +59,12 @@ directly install it on your machine by using .NET CLI:
 ```
 dotnet tool install --global Emeraude.Cli
 ```
-The trigger command for this tool is ``em``.
+The trigger command for this tool is ``emeraude``.
+
+::: warning IMPORTANT
+Please consider that if you are trying to install a beta/preview version of the CLI you need to specify the exact 
+version of the tool.
+:::
 
 ### Entity Framework Core tools
 The Entity Framework Core tools help with design-time development tasks. They're primarily used to manage

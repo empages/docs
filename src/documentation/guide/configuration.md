@@ -52,33 +52,44 @@ method you have to provide an **Action\<EmOptionsSetup>** that provides the conf
 
 ### MainOptions
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
+Main options are vital for the work of the application because there is placed the references to the assemblies and 
+configuration of the names. That's why we suggest you to invest more time to check them and specify them carefully.
+
+- **ProjectName** - name of the project - mainly used for internal purposes
+- **BaseUri** - base URl of the project
+- **TestMode** - flag that disable some checks in case you use the setup for an integration test
+- **DomainAssembly** - assembly of the domain layer from architectural point of view
+- **InfrastructureAssembly** - assembly of the infrastructure layer from architectural point of view
+- **ApplicationAssembly** - assembly of the application layer from architectural point of view
+- **AdminAssembly** - assembly of the admin layer from architectural point of view
+- **Assemblies** - list of all assemblies that will be used for all postprocessing and registrations in the framework
+- **ExecuteMigrations** - flat that indicates whether the database migration be executed automatically when the application start
+
+::: info INFO
+Please consider that the separated assemblies have to point to main assemblies if your implementations includes more than 6 projects
+in the solution.
 :::
 
 ### ApplicationsOptions
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+In order to configure the application layer of the framework please check the
+[Application Section](/documentation/core/application.html#options-applicationsoptions) for more details.
 
 ### PresentationOptions
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+In order to configure the presentation layer of the framework please check the 
+[Presentation Section](/documentation/core/presentation.html#abstractions) for more details.
 
 ### AdminOptions
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+Currently, the administration options via the startup setup are not many because the implementation of the customization
+is based on the adapter pattern. By using the startup you can only specify the type of the admin menus adapter used for
+definition of the admin menus. For more information please check [Admin Navigation Section](/documentation/admin/navigation).
 
 ### ConsumerOptions
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+Simple options that provide currently only access to the API for specifying the **ISitemapComposition** used by the
+**SitemapController** (read more at [Platform Base Section](/documentation/core/presentation.html#platform-base)).
 
 ### PersistenceOptions
 
@@ -88,27 +99,23 @@ for more details.
 
 ### IdentityOptions
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+Configuration of the identity is required in order to setup the authentication and authorization of your application
+correctly. Please check the [Identity Section](/documentation/core/infrastructure.html#identity) for more details.
 
 ### LocalizationOptions
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+In order to configure the localization feature of the framework please check the 
+[Localization Section](/documentation/core/infrastructure.html#localization) for more details.
 
 ### FilesOptions
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+In order to configure the file system feature of the framework please check the
+[File System Section](/documentation/core/infrastructure.html#file-storage) for more details.
 
 ### ClientBuilderOptions
 
-::: tip COMING SOON
-We are actively working on this section! It will be available as soon as possible!
-:::
+In order to configure the client builder of the framework please check the 
+[Client Builder Section](/documentation/client-builder/scaffold-modules) for more details.
 
 ### PortalGatewayOptions
 

@@ -5,9 +5,7 @@ title: Runtime Injection | Code Samples
 ---
 # Runtime Injection
 
-The target goal of proper runtime injection is the existence of two files in the private root of your application:
-- **runtime-injection.bundle.min.js** @ ./privateroot/portal
-- **runtime-injection.style.min.css** @ ./privateroot/portal
+The implementation of runtime injection requires few steps that must be followed. Each of these steps is described here:
 
 #### Packages
 Loading standard packages for execution gulp building of SCSS files + vite to bundling a Vue app.

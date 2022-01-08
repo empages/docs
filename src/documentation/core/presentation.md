@@ -27,6 +27,14 @@ Please consider that the **Emeraude.Presentation** assembly is mainly a supporte
 case you need more feature check the **Emeraude.Presentation.PlatformBase**.
 :::
 
+### Options
+
+In order to extend the behavior of the presentation layer you can use the following options:
+
+- **FeatureProviders** - list of feature providers that you can be provided to the setup construction of ASP.NET application
+
+<hr/>
+
 For detailed information what is available from the assembly you can check the source directly on
 [GitHub](https://github.com/emeraudeframework/emeraude/tree/master/src/Emeraude.Presentation).
 
