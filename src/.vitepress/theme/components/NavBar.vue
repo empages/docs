@@ -10,6 +10,8 @@ const repo = useRepo();
 
 const twitterLink = 'https://twitter.com/emeraude_dev';
 
+const facebookLink = 'https://www.facebook.com/emeraude.dev';
+
 </script>
 
 <template>
@@ -23,6 +25,12 @@ const twitterLink = 'https://twitter.com/emeraude_dev';
     </div>
 
     <slot name="search" />
+
+    <div v-if="repo" class="item repo-item">
+      <a title="Facebook" :href="facebookLink" target="_blank">
+        <img :src="withBase('/_assets/images/facebook-icon.svg')" alt="Facebook"/>
+      </a>
+    </div>
 
     <div v-if="repo" class="item repo-item">
       <a title="Twitter" :href="twitterLink" target="_blank">
