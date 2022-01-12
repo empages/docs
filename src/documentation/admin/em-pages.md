@@ -40,6 +40,127 @@ the possibilities of the page:
 - Details View - represents view that is used for visualization of details of specified model
 - Form View - represents views that are used for create or edit a new or specified model.
 
+### Features
+
+EmPages are designed to be flexible and customizable. In addition to that their structure allows the creation of complex 
+management flows by using context named **EmPage Feature Tree**:
+
+<div class="text-center">
+    <img class="w-auto" src="/_assets/images/feature-tree.svg" alt="Feature Tree"/>
+</div>
+
+Features are nothing different from a normal EmPage flagged to be used as a feature. The idea of feature is to provide 
+possibility to expand the management for specific entities that cannot be considered as simple ones. It is very 
+important that the features are an extension of the details view. The main idea is if you need to reference a specified 
+model to single or multiple other models you can do it by using features.
+
+::: info INFO
+Simple entities are models that are structured to be created, used, and deleted without the need for other references
+to other entities.
+:::
+
+To configure a specific EmPage to be with feature behavior you must complete the following steps:
+
+1. Flag the target EmPage as feature:
+
+```csharp
+var settings = new EmPageSchemaSettings<OwnerEmPageModel>
+{
+    // ..
+    UseAsFeature = true,
+    // ..
+};
+```
+
+2. Register the feature into the parent EmPage schema:
+
+```csharp
+.ConfigureDetailsView(detailsView =>
+{
+    // ..
+    detailsView.IncludeFeature(feature =>
+    {
+        feature.Route = "owner";
+        feature.Title = "Owner";
+        feature.MapEmPageModel<OwnerEmPageModel>(
+            x => x.UserId,
+            x => x.Id,
+            EmPageFeatureReferenceDirection.FromSourceToParent);
+        
+        feature.Breadcrumbs.Add(new EmPageBreadcrumb
+        {
+            Title = settings.Title,
+            IsActive = true,
+            Href = $"/admin/{settings.Route}",
+        });
+
+        feature.Breadcrumbs.Add(new EmPageBreadcrumb
+        {
+            Title = EmPagesPlaceholders.GetModelPlaceholder<UserEmPageModel>("users", x => x.Name),
+            Order = 1,
+            IsActive = true,
+            Href = $"/admin/{settings.Route}/{EmPagesPlaceholders.GetModelPlaceholder<UserEmPageModel>("users", x => x.Id)}",
+        });
+
+        feature.Breadcrumbs.Add(new EmPageBreadcrumb
+        {
+            Title = "Owner",
+            Order = 2,
+            IsActive = false,
+            Href = $"/admin/{settings.Route}/{EmPagesPlaceholders.GetModelPlaceholder<UserEmPageModel>("users", x => x.Id)}/owner",
+        });
+    });
+    // ...
+})
+```
+
+The method ``MapEmPageModel`` is of key importance for the feature because it set the link between both EmPages.
+Through parameters, it takes expressions of both EmPage Models and the direction of the relation. The direction could be
+**FromSourceToParent** and **FromParentToSource**.
+
+3. Specify the reference relation between the both EmPages (the parent and the child):
+
+```csharp
+public class OwnerEmPageDataStrategy : EmPageEntityDataStrategy<Owner, OwnerEmPageModel>
+{
+    public OwnerEmPageDataStrategy()
+    {
+        this.AddCustomFilterExpression(x => x.UserId, (value) => x => x.UserId == new Guid(value.ToString()));
+    }
+}
+```
+
+::: warning IMPORTANT
+Consider that the reference specification is related to the usage of the database-related data strategy. In case
+you are using a custom data strategy you have to specify manually the reference how the CQRS request will handle the
+relation input.
+:::
+
+4. In case you want to configure the forms of the feature you need to set up the proper link:
+
+```csharp
+.ConfigureFormView(formView =>
+{
+    // ..
+    formView
+        .Use(x => x.UserId, item =>
+        {
+            item.Hidden = true;
+            item.SetComponent<EmPageHiddenQueryMutator>(component =>
+            {
+                component.ReferenceKey = EmPagesConstants.ParentQueryParam;
+            });
+        });
+    // ..
+})
+```
+
+This configuration applies the form view item be extracted from the query string.
+
+::: warning IMPORTANT
+Consider that query string in the actions that will redirect you to the specified form view must be set up manually.
+:::
+
 ## Data
 
 The **Data** node represents the actual data sets that will be visualized into the page. The main difference with the model and schema
