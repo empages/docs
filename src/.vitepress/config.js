@@ -43,6 +43,7 @@ module.exports = {
             '/code-samples/': getCodeSamplesSidebar()
         },
         algolia: {
+            appId: 'SU8Z5GESLI',
             apiKey: '4113e5c121ab379d6deb7a323944d778',
             indexName: 'emeraude'
         }
