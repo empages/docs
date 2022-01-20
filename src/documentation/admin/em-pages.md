@@ -170,6 +170,17 @@ In order to allow developers the possibility to take data from any data source (
 third-party provider, etc.) the implementation of data is always followed by **Data Strategy**. The data strategy is the 
 way how the data is fetched so the EmPages can be considered as a limitless from a data perspective.
 
+In the following schema you can see the flow of each EmPage request. It shows how EmPage converts a simple input into actual
+data. Please consider the schema shows only the data flow and excludes the schema mapping.
+
+<div class="text-center">
+    <img class="w-auto" src="/_assets/images/em-page-request-handling.svg" alt="EmPage Request Handling"/>
+</div>
+
+::: warning IMPORTANT
+The scope of Emeraude Portal is customizable only in case you make your own instance of the client!
+:::
+
 <hr/>
 
 ::: tip RECOMMENDATION
