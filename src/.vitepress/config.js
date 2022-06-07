@@ -13,7 +13,7 @@ module.exports = {
     ],
     themeConfig: {
         logo: '/_assets/images/logo_text.svg',
-        repo: 'emeraudeframework',
+        repo: 'empages',
         editLinks: true,
         editLinkText: 'Edit this page on GitHub',
         lastUpdated: 'Last Updated',

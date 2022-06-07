@@ -2,7 +2,7 @@
   "name": "emeraude-docs",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/emeraudeframework/docs",
+  "repository": "https://github.com/empages/docs",
   "author": "Georgi Karagogov",
   "license": "MIT",
   "scripts": {
