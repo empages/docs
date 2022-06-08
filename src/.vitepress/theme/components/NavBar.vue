@@ -8,9 +8,9 @@ defineEmits(['toggle'])
 
 const repo = useRepo();
 
-const twitterLink = 'https://twitter.com/emeraude_dev';
+const twitterLink = 'https://twitter.com/empages_net';
 
-const facebookLink = 'https://www.facebook.com/emeraude.dev';
+const facebookLink = 'https://www.facebook.com/empages.net';
 
 </script>
 
