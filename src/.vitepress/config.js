@@ -13,6 +13,62 @@ export default {
     ],
     themeConfig: {
         siteTitle: 'Emerald Pages',
-        logo: '/images/logo.svg'
+        logo: '/images/logo.svg',
+        nav: [
+            {
+                text: 'Documentation',
+                link: '/docs/guide/introduction',
+                activeMatch: '^/docs/'
+            },
+            {
+                text: 'Examples',
+                link: '/examples/pages/simple-page',
+                activeMatch: '^/examples'
+            },
+            {
+                text: 'Portal',
+                link: 'https://portal.empages.net'
+            }
+        ],
+        sidebar: {
+            '/docs/': getDocumentationSidebar(),
+            '/examples/': getCodeSamplesSidebar()
+        },
     }
+}
+
+function getDocumentationSidebar() {
+    return [
+        {
+            text: 'Guide',
+            items: [
+                { text: 'Introduction', link: '/docs/guide/introduction' },
+                { text: 'Getting Started', link: '/docs/guide/getting-started' },
+                { text: 'Configuration', link: '/docs/guide/configuration' },
+            ]
+        },
+        {
+            text: 'Essentials',
+            items: [
+                { text: 'Create Page', link: '/docs/essentials/create-page' },
+            ]
+        },
+        {
+            text: 'Portal',
+            items: [
+                { text: 'Gateway', link: '/docs/portal/gateway' },
+            ]
+        },
+    ]
+}
+
+function getCodeSamplesSidebar() {
+    return [
+        {
+            text: 'Pages',
+            items: [
+                { text: 'Simple Page', link: '/examples/pages/simple-page' }
+            ]
+        },
+    ]
 }
