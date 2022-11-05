@@ -1,3 +1,1 @@
----
-home: true
----
+# Emerald Pages
