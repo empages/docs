@@ -50,13 +50,29 @@ function getDocumentationSidebar() {
         {
             text: 'Essentials',
             items: [
-                { text: 'Create Page', link: '/docs/essentials/create-page' },
+                { text: 'Pages', link: '/docs/essentials/pages' },
+                { text: 'Commands', link: '/docs/essentials/commands' },
+                { text: 'Layout', link: '/docs/essentials/layout' },
+                { text: 'Permissions', link: '/docs/essentials/permissions' },
+            ]
+        },
+        {
+            text: 'View Contexts',
+            items: [
+                { text: 'View Items', link: '/docs/view-contexts/view-items' },
+                { text: 'Tables', link: '/docs/view-contexts/tables' },
+                { text: 'Details', link: '/docs/view-contexts/details' },
+                { text: 'Forms', link: '/docs/view-contexts/forms' },
             ]
         },
         {
             text: 'Portal',
             items: [
                 { text: 'Gateway', link: '/docs/portal/gateway' },
+                { text: 'Settings', link: '/docs/portal/settings' },
+                { text: 'Identity', link: '/docs/portal/identity' },
+                { text: 'Pages', link: '/docs/portal/pages' },
+                { text: 'Components', link: '/docs/portal/components' },
             ]
         },
     ]
